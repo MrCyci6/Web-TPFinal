@@ -31,14 +31,14 @@ nav .left {
 nav .right .btn {
     padding: 10px 20px;
     margin-right: 20px;
-    background-color: #254e7a;
+    background-color: #0D73E2;
     color: #fff;
     border-radius: 15px;
     text-decoration: none;
 }
 
 nav .right .btn:hover {
-    background-color: #0056b3;
+    background-color: #00B1F9;
 }
   
 .separator {
@@ -58,5 +58,5 @@ nav a {
 }
   
 nav a:hover {
-    color: #0056b3;
+    color: #00B1F9;
 }
