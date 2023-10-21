@@ -1,7 +1,6 @@
 
 header {
-    padding: 10px;
-    position: fixed;
+    padding: 0px;
     width: 100%;
 }
   
@@ -41,7 +40,7 @@ nav .right .btn {
 nav .right .btn:hover {
     background-color: #00B1F9;
 }
-  
+
 .separator {
     width: 0.2%;
     height: 30px;

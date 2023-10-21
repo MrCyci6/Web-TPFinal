@@ -1,21 +1,23 @@
 .login-card {
     margin-top: 0 auto;
-    padding: 20px;
+    padding: 100px;
 }
 
 .login-form {
     text-align: left;
     background-color: #fff;
     border: 1px solid #ddd;
-    border-radius: 10px;
+    border-radius: 20px;
     padding: 30px;
     box-shadow: 0 2px 4px #000;
     max-width: 400px;
     margin: 0 auto;
 }
 
-h2 {
+h2.login-title {
     text-align: center;
+    padding-bottom: 20px;
+    padding-top: 0;
 }
 
 .form-group {
@@ -31,14 +33,14 @@ input {
     width: 95%;
     padding: 12px;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 button {
     background-color: #0D73E2;
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 15px;
     padding: 10px 20px;
     cursor: pointer;
     transition: background-color 0.3s;
