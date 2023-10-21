@@ -34,7 +34,8 @@ nav .right .btn {
     background-color: #0D73E2;
     color: #fff;
     border-radius: 15px;
-    text-decoration: none;
+    text-decoration: none;    
+    transition: background-color 0.3s;
 }
 
 nav .right .btn:hover {
@@ -51,10 +52,11 @@ nav .right .btn:hover {
 nav a {
     text-decoration: none;
     font-size: 1rem;
-    font-weight: 450;
+    font-weight: 500;
     padding: 0 20px;
     cursor: pointer;
     color: #cac8c8;
+    transition: background-color 0.3s;
 }
   
 nav a:hover {
