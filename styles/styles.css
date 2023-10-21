@@ -1,3 +1,12 @@
-h1{
-  color: green;
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/montserrat/Montserrat-VariableFont_wght.ttf");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif; 
+  background: rgb(5,5,47);
+  background: radial-gradient(circle, rgba(5,5,47,1) 0%, rgba(9,15,37,1) 67%); 
 }
