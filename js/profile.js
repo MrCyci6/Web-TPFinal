@@ -54,11 +54,11 @@ firebase.auth().onAuthStateChanged(async user => {
         
         // MODIFICATIONS
 
-        let emailB = document.getElementById("email-button");
+        //let emailB = document.getElementById("email-button");
         let usernameB = document.getElementById("username-button");
         let passwordB = document.getElementById("password-button");
 
-        let newEmail = document.getElementById("new-email");
+        //let newEmail = document.getElementById("new-email");
         let newUsername = document.getElementById("new-username");
         let newPassword = document.getElementById("new-password");
 
@@ -66,7 +66,7 @@ firebase.auth().onAuthStateChanged(async user => {
         let error = document.getElementById("error")
 
         // EMAIL
-        emailB.addEventListener("click", e => {
+        /*emailB.addEventListener("click", e => {
             
             newEmail = newEmail.value;
 
@@ -103,7 +103,7 @@ firebase.auth().onAuthStateChanged(async user => {
             } else {
                 error.textContent = "Adresse E-mail non vérifiée."
             }
-        })
+        })*/
 
         // IDENTIFIANT
         usernameB.addEventListener("click", e => {
