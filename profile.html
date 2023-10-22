@@ -2,21 +2,22 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8">
-        <title> CyberWatchdogs | Acceuil </title>
+        <title> CyberWatchdogs | Profile </title>
         <link rel="icon" types="image/png" href="./images/logo3.png">
         <link rel="stylesheet" href="./styles/styles.css">
         <link rel="stylesheet" href="./styles/navbar.css">
         <link rel="stylesheet" href="./styles/footer.css">
+        <link rel="stylesheet" href="./styles/profile.css">
 
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
-        <script src="./js/index.js"></script>
+        <script src="./js/profile.js"></script>
+        
     </head>
     <body>
-      <!-- NAVBAR -->
         <header>
             <nav>
                 <div class="left">
@@ -29,19 +30,50 @@
                     <a href="">A propos</a>
                 </div>
                 <div class="right">
-                    <div id="is-connected">
-                    	<a href="">Contact</a>
-                        <a class="btn" href="./login.html">Connexion</a>
-                    </div>
+                    <a href="">Contact</a>
+                    <a class="btn-login" href="./profile.html"><i class="fa fa-user-circle"></i></a>
+					          <button id="logout" type="submit"><i class="fa fa-window-close-o"></i></button>
                 </div>
             </nav> 
             <hr>            
         </header>
         
-        <!-- BODY -->
-        <div style="height: 2000px;"></div>
+        <div class="profile">
+            <div class="profile-card">
+                <div class="profile-header">
+                    <img src="./images/logo2.png" alt="pdp">
+                    <h1 id="profile-username"></h1>
+                    <p id="profile-email"></p>
+                </div>
+                <hr>
+                <div class="profile-details">
+                    <br>
+                    <h2>Modification</h2>
+                    <div id="profile-form" class="profile-form">
+                        <label for="new-email">Nouvelle Adresse e-mail</label>
+						<div class="save-button">
+                            <input type="email" id="new-email" name="new-email" placeholder="Entrez une nouvelle adresse e-mail">
+                            <button id="email-button" type="submit">Enregistrer</button>
+                        </div>
+						
+                        <label for="new-username">Nouveau Nom d'utilisateur</label>
+						<div class="save-button">
+                        <input type="text" id="new-username" name="new-username" placeholder="Entrez un nouveau nom d'utilisateur">
+                        <button id="username-button" type="submit">Enregistrer</button>
+						</div>
+
+                        <label for="new-password">Nouveau Mot de passe</label>
+						<div class="save-button">
+                        <input type="password" id="new-password" name="new-password" placeholder="Entrez un nouveau mot de passe">
+                        <button id="password-button" type="submit">Enregistrer</button>
+						</div>
+                    </div>
+                    <div id="success"></div>
+                    <div id="error"></div>
+                </div>
+            </div>
+        </div>
         
-        <!-- FOOTER -->
         <hr class="footer">
         <footer>
             <div class="footer-section">

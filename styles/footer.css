@@ -23,7 +23,7 @@ footer {
 .footer-section a {
     text-decoration: none;
     color: #cac8c8;
-    transition: background-color 0.3s;
+    transition: color 0.3s;
 }
 
 .footer-section a:hover {

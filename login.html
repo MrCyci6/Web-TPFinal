@@ -8,9 +8,14 @@
 		<link rel="stylesheet" href="./styles/styles.css">
         <link rel="stylesheet" href="./styles/navbar.css">
         <link rel="stylesheet" href="./styles/footer.css">
-        
+
+		<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+        <script src="./js/login.js"></script>
     </head>
     <body>
+		<!-- NAVBAR -->
         <header>
             <nav>
                 <div class="left">
@@ -30,25 +35,27 @@
             <hr>            
         </header>
         
-
+		<!-- LOGIN -->
         <div class="login-card">
 			<div class="login-form">
 				<h2 class="login-title">Connexion</h2>
-				<form>
+				<form id="form">
 					<div class="form-group">
-						<label for="username">Nom d'utilisateur</label>
-						<input type="text" id="username" name="username" placeholder="Nom d'utilisateur" required>
+						<label for="email">Adresse E-mail</label>
+						<input type="text" id="email" name="email" placeholder="Adresse E-mail" required>
 					</div>
 					<div class="form-group">
 						<label for="password">Mot de passe</label>
 						<input type="password" id="password" name="password" placeholder="Mot de passe" required>
+						<a id="forgot" href="">J'ai oublié mon mot de passe</a>
 					</div>
 					<button type="submit">Se connecter</button>
 				</form>
+				<div id="error"></div>
 			</div>
 		</div>
 
-
+		<!-- FOOTER -->
 		<hr class="footer">
 		<footer>
 			<div class="footer-section">

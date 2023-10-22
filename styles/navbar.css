@@ -41,6 +41,37 @@ nav .right .btn:hover {
     background-color: #00B1F9;
 }
 
+a.btn-login {
+    padding: 8px 15px;
+    margin-right: 5px;
+    background-color: #0D73E2;
+    color: #fff;
+    border-radius: 15px;
+    text-decoration: none;    
+    transition: background-color 0.3s;
+}
+
+a.btn-login:hover {
+    color: #fff;
+    background-color: #00B1F9;
+}
+
+nav .right button#logout {
+    padding: 10px 17px;
+    margin-right: 5px;
+    background-color: #0D73E2;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: background-color 0.3s;
+}
+
+nav .right button#logout:hover {
+    color: #fff;
+    background-color: #00B1F9;
+}
+
 .separator {
     width: 0.2%;
     height: 30px;
@@ -55,7 +86,7 @@ nav a {
     padding: 0 20px;
     cursor: pointer;
     color: #cac8c8;
-    transition: background-color 0.3s;
+    transition: color 0.3s;
 }
   
 nav a:hover {
