@@ -47,8 +47,9 @@ div.profile-card {
     margin: 0 auto;
 }
 
-.profile-header img {
+.profile-header svg {
     width: 70%;
+    padding-top: 20px;
     display: block;
     margin: 0 auto;
 }
