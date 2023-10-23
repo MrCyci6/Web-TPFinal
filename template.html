@@ -2,40 +2,47 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8">
-        <title> CyberWatchdogs </title>
+        <title> CyberWatchdogs | Acceuil </title>
         <link rel="icon" types="image/png" href="./images/logo3.png">
         <link rel="stylesheet" href="./styles/styles.css">
         <link rel="stylesheet" href="./styles/navbar.css">
         <link rel="stylesheet" href="./styles/footer.css">
-        
+
+		    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+        <script src="./js/index.js"></script>
         <script src="./js/animation.js"></script>
-        
     </head>
     <body>
       <!-- NAVBAR -->
         <header>
             <nav>
                 <div class="left">
-                    <a href="">
+                    <a href="./index.html">
                         <img src="./images/logo3.png" alt="CyberWatchdogs Logo" height="80px">
                     </a>
+                    
                     <div class="separator"></div>
+
                     <a href="">Formations</a>
                     <a href="">Offres</a>
                     <a href="">Equipe</a>
                 </div>
                 <div class="right">
-                  <div id="is-connected">
-                      <a href="">Contact</a>
-                      <a class="btn" href="./login.html">Connexion</a>
-                  </div>
+                    <div id="is-connected">
+                    	  <a href="">Contact</a>
+                        <a class="btn" href="./login.html">Connexion</a>
+                    </div>
                 </div>
             </nav> 
             <hr>            
         </header>
         
         <!-- BODY -->
-        <div style="height: 2000px;"></div>
+        <div style="height: 500px;"></div>
         
         <!-- FOOTER -->
         <hr class="footer">

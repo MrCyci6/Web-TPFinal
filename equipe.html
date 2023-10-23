@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title> CyberWatchdogs | Equipe </title>
+	<link rel="icon" types="image/png" href="./images/logo3.png">
+	<link rel="stylesheet" href="./styles/styles.css">
+	<link rel="stylesheet" href="./styles/navbar.css">
+	<link rel="stylesheet" href="./styles/footer.css">
+	<link rel="stylesheet" href="./styles/equipe.css">
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+	<script src="./js/index.js"></script>
+	<script src="./js/animation.js"></script>
+</head>
+<body>
+	<!-- NAVBAR -->
+	<header>
+		<nav>
+			<div class="left">
+				<a href="./index.html">
+					<img src="./images/logo3.png" alt="CyberWatchdogs Logo" height="80px">
+				</a>
+				
+				<div class="separator"></div>
+				
+				<a href="">Formations</a>
+				<a href="">Offres</a>
+				<a href="">Equipe</a>
+			</div>
+			<div class="right">
+				<div id="is-connected">
+					<a href="">Contact</a>
+					<a class="btn" href="./login.html">Connexion</a>
+				</div>
+			</div>
+		</nav> 
+		<hr>            
+	</header>
+	
+	<!-- BODY -->
+	<!-- Inspired from fronted joe -->
+	<div class="equipe-section">
+		<div class="equipe-card">
+			<img src="./images/cyriac.jpg" />
+			<div>
+				<h2>Cyriac LENOIR</h2>
+				<h3>Fondateur</h3>
+				<ul>
+					<li>Développeur Back-End (JavaScript)</li>
+					<li>Développeur Java, Python & NodeJS</li>
+					<li>Administrateur Sytème</li>
+				</ul>
+				<a target="_blank" href="https://instagram.com/cyriac.js"><i class="fa fa-instagram"></i></a>
+				<a target="_blank" href="https://github.com/MrCyci6"><i class="fa fa-github"></i></a>
+				<a target="_blank" href="https://x.com/mrcyci"><i class="fa fa-twitter"></i></a>
+				<a target="_blank" href="mailto:cyriac.lenoir@isen-ouest.yncrea.fr"><i class="fa fa-envelope"></i></a>
+			</div>
+		</div>
+	</div>
+	<div class="equipe-section">
+		<div class="equipe-card">
+			<img src="./images/maxime.jpg" />
+			<div>
+				<h2>Maxime VADE</h2>
+				<h3>Fondateur</h3>
+				<ul>
+					<li>Développeur Front-End (HTML, CSS)</li>
+					<li><b>Rajoute des trucs que tu sais faire</b></li>
+					<li>Administrateur Sytème</li>
+				</ul>
+				<a target="_blank" href="https://www.instagram.com/max_vde_/"><i class="fa fa-instagram"></i></a>
+				<a target="_blank" href="https://github.com/Synaro0"><i class="fa fa-github"></i></a>
+				<a target="_blank" href="https://twitter.com/MaximeVade"><i class="fa fa-twitter"></i></a>
+				<a target="_blank" href="mailto:maxime.vade@isen-ouest.yncrea.fr"><i class="fa fa-envelope"></i></a>
+			</div>
+		</div>
+	</div>
+	
+	<!-- FOOTER -->
+	<hr class="footer">
+	<footer>
+		<div class="footer-section">
+			<div>
+				<h2>Informations</h2>
+				<ul>
+					<li><a href="">Mentions légales</a></li>
+					<li><a href="">Politique de confidentialité</a></li>
+					<li><a href="">Conditions d'utilisation</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="footer-section">
+			<div>
+				<h2>Accessibilité</h2>
+				<ul>
+					<li><a href="">Accessibilité web</a></li>
+					<li><a href="">Aide à la navigation</a></li>
+					<li><a href="">Accessibilité pour tous</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="footer-section">
+			<div>
+				<h2>Réseaux sociaux</h2>
+				<ul>
+					<li><a target="_blank" href="https://github.com/CyberWatchdogs">Github</a></li>
+					<li><a target="_blank" href="https://x.com/CyberWatchdogs">Twitter</a></li>
+					<li><a target="_blank" href="https://instagram.com/CyberWatchdogs">Instagram</a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+	
+	<div class="copyright">
+		Tout droit réservé &copy; 2023
+	</div>
+	
+	<!-- ANIMATION -->
+	<canvas id="canvas"></canvas>
+</body>
+</html>
