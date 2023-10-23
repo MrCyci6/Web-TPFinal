@@ -1,0 +1,55 @@
+.card {
+    margin-top: 0 auto;
+    padding: 100px;
+}
+
+.form {
+    text-align: left;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 2px 4px #000;
+    max-width: 400px;
+    margin: 25px auto;
+}
+
+.title {
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 0;
+}
+
+.group {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    color: rgb(139, 135, 135);
+    margin: 10px;
+}
+
+input {
+    width: 95%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+button {
+    background-color: #0D73E2;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+button:hover {
+    background-color: #00B1F9;
+}

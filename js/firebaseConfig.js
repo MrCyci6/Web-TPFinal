@@ -1,4 +1,4 @@
-module.exports = {
+const firebaseConfig = {
     apiKey: "AIzaSyClU4Zx0UGRdmXBwVENNd1htMo10sdeTLk",
     authDomain: "cyberwatchdogs-b4b84.firebaseapp.com",
     projectId: "cyberwatchdogs-b4b84",
