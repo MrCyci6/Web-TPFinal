@@ -92,3 +92,69 @@ nav a {
 nav a:hover {
     color: #00B1F9;
 }
+
+@media screen and (width <= 970px) {
+    nav {
+        margin-left: 20px;
+        margin-right: 20px;
+        flex-wrap: wrap;
+    }
+
+    nav .left {
+        margin-bottom: 10px;
+    }
+
+    nav .right {
+        margin-top: 10px;
+        margin-left: 20%;
+    }
+
+    nav .right a {
+        color: transparent;
+
+    }
+
+    nav .separator {
+        display: none;
+    }
+
+    header hr {
+        margin-top: 50px;
+        margin-bottom: 0;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media screen and (width <= 520px) {
+
+    nav .left {
+        margin-left: 25%;
+        display: block;
+    }
+
+    nav .right {
+        margin-left: 10%;
+        display: block;
+    }
+
+    nav .left img {
+        margin-left: 30%;
+    }
+
+    nav .left a#responsive {
+        margin-left: 30%;
+        display: block;
+    }
+}
+
+@media screen and (width <= 340px) {
+
+    nav .left {
+        margin-left: 15%;
+    }
+
+    nav .right {
+        margin: 10px;
+    }
+}

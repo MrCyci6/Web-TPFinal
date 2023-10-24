@@ -18,13 +18,18 @@ document.addEventListener("DOMContentLoaded",  () => {
                 window.location.href = "profile.html"
             })
             .catch(e => {
-                const json = JSON.parse(e.message)
-
-                if(json && json.error.message == "INVALID_LOGIN_CREDENTIALS") {
-                    error.textContent = "Identifiants incorrects.";
-                } else {
-                    console.error("Erreur :", e);
-                    error.textContent = "Erreur interne.";
+                try {
+                    const json = JSON.parse(e.message);
+                
+                    if(json && json.error.message == "INVALID_LOGIN_CREDENTIALS") {
+                        error.textContent = "Identifiants incorrects.";
+                    } else {
+                        console.error("Erreur :", e);
+                        error.textContent = "Erreur.";
+                    }
+                } catch (e) {
+                    console.error("Erreur :", e)
+                    error.textContent = "Erreur."
                 }
             });
     });
