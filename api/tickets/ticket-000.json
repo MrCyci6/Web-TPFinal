@@ -1,0 +1,12 @@
+{
+    "title": "",
+    "description": "",
+    "email": "",
+    "status": "open",
+    "messages": [
+        {
+            "utilisateur": "Administrateur",
+            "message": "Bonjour, décrivez moi votre demande"
+        }
+    ]
+}

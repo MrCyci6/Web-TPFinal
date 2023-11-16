@@ -1,0 +1,20 @@
+{
+  "name": "cyberwatchgods-api",
+  "version": "1.0.0",
+  "description": "Externe module for CyberWatchdogs website",
+  "main": "api.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cyriac LENOIR, Maxime VADE",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "fs": "^0.0.1-security",
+    "http": "^0.0.1-security",
+    "socket.io": "^4.7.2"
+  }
+}

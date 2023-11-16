@@ -10,6 +10,7 @@
 	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	
+	<script src="https://kit.fontawesome.com/c4352304cc.js" crossorigin="anonymous"></script>
 	<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
@@ -29,7 +30,7 @@
 				<div class="separator"></div>
 				
 				<a id="responsive" href="">Formations</a>
-				<a id="responsive" href="">Offres</a>
+				<a id="responsive" href="./offres.html">Offres</a>
 				<a id="responsive" href="./equipe.html">Equipe</a>
 			</div>
 			<div class="right">
@@ -43,33 +44,150 @@
 	</header>
 	
 	<!-- BODY -->
-	<div class="section">
-		<div class="card">
-			<div class="image">
-				<img width="75%" src="./svg/Security On-bro.svg" alt="Security svg"></img>
-			</div>
-			<div class="text">
-				<h3>Votre sécurité est importante</h3>
-				<p>Duis ea consectetur consequat tempor. Cillum excepteur officia sit aliqua magna id mollit veniam pariatur aliquip excepteur consequat. Quis amet minim deserunt qui duis magna nulla tempor voluptate est irure culpa officia ipsum.</p>		
-			</div>
-		</div>
-		
-		<div class="card">
-			<div class="text">
+	<div class="top">
+		<h1 id="first">Besoin d'une sécurité à</h1>
+		<h1 id="sec">toutes épreuves ?</h1>
 
-			</div>
+		<div id="space"></div>
+
+		<p>Découvrez notre équipe</p>
+		<p>et les services que nous proposons</p>
+
+		<a class="btn" href="#presentation">Nous découvrir</a>
+	</div>
+
+	<div class="section" id="presentation">
+		<div class="presentation">
 			<div class="image">
-				<img width="75%" src="./svg/Admin-bro.svg" alt="Admin svg">
+				<img width="100%" src="./images/locaux.jpg" alt="Locaux"></img>
+			</div>
+			<div class="text">
+				<h3>Nos locaux</h3>
+				<p>Nos locaux sont prêts à vous acceuillir vous et vos services.</p>
+				<p>En effet nous proposons également de l'hébergement dans les contrats
+					effectués avec nos équipes.</p>
+				<p>Il est également possible de mettre en place un IntraNet dans vos locaux, bien évidemment
+					sécurisé comme il se doit par nos soins.</p>
+				<ul>
+					<li>Supervision <b>24h/24h</b></li>
+					<li>Déplacement sur place <b>gratuit</b></li>
+				</ul>	
 			</div>
 		</div>
 		
-		<div class="card">
-			<div class="image">
-				<img width="75%" src="./svg/Innovation-rafiki.svg" alt="Inovation svg">
-			</div>
+		<div class="presentation">
 			<div class="text">
-				
+				<h3>Nouvelles technologies</h3>
+				<p>En effet, nos équipes se forment tous les jours aux nouvelles technologies</p>
+				<p>L'intelligence artificielle prend de plus en plus d'empleur, cela devient donc notre travail
+					de savoir les utiliser, comme de les contrer.
+				</p>
+				<p>Nous avons des <b>ingénieurs</b> spécialisés dans la <b>Cyber-Sécurité</b>, la <b>Cryptologie</b>.
+					Nos Responsables <b>Cyber-Défense</b> et nos <b>Juristes Cyber</b> pourront également vous êtres très utiles
+				</p>
+				<ul>
+					<li>L'IA est désormais notre <b>ami</b></li>
+					<li>Nos serveurs <b>possèdent</b> les <b>derniers technologies</b> d'hardware</li>
+					<li></li>
+				</ul>	
 			</div>
+			<div class="image">
+				<img width="130%" src="./images/ia.jpg" alt="Nouvelles technologies">
+			</div>
+		</div>
+	</div>
+
+	<div class="section">
+		<h1 id="chiffres">Quelques chiffres</h3>
+		<p id="chiffres">Voici quelques chiffres qui peuvent vous convaincre...</p>
+
+		<div class="cards">
+			<label>
+				<input type="checkbox"/>
+				<article>
+					<div class="front">
+					  <header>
+						<h2>Clients</h2>
+						<i class="fa-solid fa-bars"></i>
+					  </header>
+					  <img src="./svg/city-solid.svg" alt="city svg">
+					  <p>Déjà <b>52</b> entreprises/particuliers nous font <b>confiance</b>.</p>
+					</div>
+					<div class="back">
+					  <header>
+						<h2>Clients</h2>
+						<i class="fa-solid fa-x"></i>
+					  </header>
+						
+					  <p id="top">Tous nos clients sont <b>satisfait</b> de notre <b>intervention</b>.
+						Voyez par vous mêmes avec nos <b>avis</b>:
+					  </p>
+					  <p>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star-half"></i>
+						<br>
+						<i>Basé sur 32 avis</i>					
+					  </p>
+					</div>
+				</article>
+			</label>
+			
+			<label>
+				<input type="checkbox"/>
+				<article>
+					<div class="front">
+					  <header>
+						<h2>Sécurité</h2>
+						<i class="fa-solid fa-bars"></i>
+					  </header>
+					  <img src="./svg/lock-solid.svg" alt="city svg">
+					  <p>Plus de <b>108</b> systèmes informatiques <b>sécurisés</b>.</p>
+					</div>
+					<div class="back">
+					  <header>
+						<h2>Sécurité</h2>
+						<i class="fa-solid fa-x"></i>
+					  </header>
+						
+					  <p>Nos équipes ont <b>contribués</b>, à la <b>sécurisation</b> de nombreux
+						systèmes, et ce n'est <b>pas prêt de s'arrêter</b>.
+						Nos statistiques de satisfaction sont <b>exponentiels</b>, tout comme
+						nos ingénieurs et leur travail.
+					  </p>
+					</div>
+				</article>
+			</label>
+
+			
+			
+			<label>
+				<input type="checkbox"/>
+				<article>
+					<div class="front">
+					  <header>
+						<h2>Alertes</h2>
+						<i class="fa-solid fa-bars"></i>
+					  </header>
+					  <img src="./svg/bell-solid.svg" alt="city svg">
+					  <p><b>26</b> états d'urgence <b>passés</b> avec succès.</p>
+					</div>
+					<div class="back">
+					  <header>
+						<h2>Alertes</h2>
+						<i class="fa-solid fa-x"></i>
+					  </header>
+						
+					  <p>Les états d'urgences ne sont plus qu'un <b>simple jeu</b>
+						grâce à nos <b>Responsables-Cyber</b> capables de coordonner une équipe
+						de <b>A à Z</b> sans problème.
+						Un taux de <b>100%</b> de réussite sur nos <b>urgences</b>.
+					  </p>
+					</div>
+				</article>
+			</label>
 		</div>
 	</div>
 	

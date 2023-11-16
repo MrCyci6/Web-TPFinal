@@ -9,8 +9,15 @@ body {
   background-color: radial-gradient(circle, rgba(5,5,47,1) 0%, rgba(9,15,37,1) 67%);
   position: relative;
   padding-bottom: 5px;
+  
+  /*background-image: url("../images/logo3-2.png");
+  background-repeat: no-repeat;
+  background-size: 25%;
+  background-position: center;
+  background-attachment: fixed;*/
 }
 
+/* animation */
 canvas {
   display: block;
   position: absolute;
@@ -21,76 +28,200 @@ canvas {
   height: 100%;
 }
 
-div.section {
-  padding-top: 90px;
-  padding-bottom: 90px;
+div.top {
+  height: calc(100px * 6);
+  margin-bottom: 10%;
 
-  height: 600px;
-  margin: 50px;
-  
   display: flex;
-  flex-direction: column ;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  background-image: url("../images/logo3-2.png");
-  background-repeat: no-repeat;
-  background-size: 25%;
-  background-position: center;
-  background-attachment: fixed;
+}
+
+div.top h1#first {
+  color: #cac8c8;
+  font-size: 350%;
+
+  margin-top: -2.5%;
+  margin-bottom: -3%;
+}
+
+div.top h1#sec {
+  color: #0D73E2;
+  font-size: 350%;
+}
+
+div.top div#space {
+  margin: 0.5%;
+}
+
+div.top p {
+  color: #cac8c8;
+  margin: 0 0 0.4%;
+}
+
+div.top a.btn {
+  padding: 1% 2%;
+  border-radius: 20px;
+  margin-top: 2.5%;
+
+  background-color: #0D73E2;
+  color: #ffffff;
+  
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+div.top a.btn:hover {
+  background-color: #00B1F9;
+}
+
+div.section {
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   /* background-color: aqua; */
 }
 
-div.section .card {
+div.section .presentation {
   margin-bottom: 20px;
 
   border-radius: 25px;
   height: 80%;
   width: 75%;
   
-  /* background-color: brown; */
-  
+  opacity: 80%;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-div.section .card .image:hover {
-  opacity: 1;
-  transition: transform 0.3s;
-  transform: scale(1.05);
-}
-
-div.section .card .text:hover {
-  opacity: 1;
-  transition: transform 0.3s;
-  transform: scale(1.05);
-}
-
-div.section .card .image {
+div.section .presentation .image {
   flex: 1;
-  /* background-color: black; */
-
-  border-radius: 25px;
-  margin: 5px;
-  padding-left: 50px;
+  margin: 0 2.5%;
 }
 
+div.section .presentation .image img {
+  border-radius: 10%;
+}
 
-div.section .card .text {
+div.section .presentation .text {
   flex: 2;
-  background-color: #cac8c8;
-  border-radius: 25px;
-  height: 170px;
-  margin-left: 5px;
-  margin-right: 5px;
-  margin-top: 30px;
-  margin-bottom: 30px;
+
+  color: #cac8c8;
+  background-color: rgb(11, 11, 51);
+  border-radius: 10px;
+  height: calc(100px * 2.5);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
 }
 
-div.section .card .text h3 {
-  margin-left: 10px;
+div.section .presentation .text h3 {
+  margin-left: 2.5%;
+  margin-bottom: 0.5%;
 }
 
-div.section .card .text p {
-  margin-left: 10px;
+div.section .presentation .text p {
+  margin-left: 2.5%;
+  margin-bottom: -1.5%;
+}
+
+div.section .presentation ul {
+  /*list-style-image: url("../svg/check-solid.svg");*/
+  list-style-type: none;
+}
+
+div.section .presentation li {
+  padding-left: 2.5%;
+  background-image: url("../svg/check-solid.svg");
+  background-size: 10px;
+  background-position: 0.5px;
+  background-repeat: no-repeat;
+}
+
+div.section #chiffres {
+  color: #cac8c8;
+  margin-bottom: 1%;
+}
+
+div.section .cards {
+  margin-top: 2.5%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2.5%;
+
+  color: #cac8c8;
+}
+
+div.section article {
+  position: relative;
+  perspective: 300%;
+  width: 300px;
+  height: 300px;
+}
+
+div.section article header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5%;
+  margin-bottom: 18%;
+}
+
+div.section article header h2 {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
+}
+
+div.section article img {
+  width: 35%;;
+}
+
+div.section article .front,
+div.section article .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  backface-visibility: hidden;
+  background: rgb(11, 11, 51);
+  border-radius: 10%;
+  padding: 10%;
+  transition: 0.6s;
+  cursor: pointer;
+}
+
+div.section .back {
+  transform: rotateY(180deg);
+}
+
+div.section input {
+  position: absolute;
+  scale: 0;
+}
+
+div.section input:checked ~ article .back {
+  transform: rotateY(0);
+}
+
+div.section input:checked ~ article .front {
+  transform: rotateY(-180deg);
+} 
+
+div.section article .back p#top {
+  margin-top: 25%;
 }
