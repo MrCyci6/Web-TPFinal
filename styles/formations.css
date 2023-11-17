@@ -1,0 +1,132 @@
+body {
+  margin: 30px;
+  height: 100vh;
+  color: rgb(255 255 255 / 90%);
+  font-family: "Euclid Circular A", "Poppins";
+}
+
+/**LANGAGE A CONNAITRE**/
+.language {
+  background: #494964;
+  width: 400px;
+  padding: 20px;
+  padding-right: 40px;
+  border-radius: 10px;
+  display: grid;
+  gap: 10px;
+}
+
+.language header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 48px;
+  padding: 0 10px 0 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #606080;
+  color: #f8f8f8;
+}
+
+.language header.active {
+  background: #5c60ff;
+}
+
+.language header.active span {
+  rotate: -180deg;
+}
+
+.language h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.language p {
+  margin: 0;
+  padding: 20px 10px;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.language span {
+  transition: 0.3s;
+}
+
+.language header ~ div {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s ease;
+}
+
+/*****************************/
+
+.admission h1{
+  text-align: center;
+  color: #00B1F9;
+}
+
+.pre-recquis{
+  text-align: center;
+}
+
+.pre-recquis ul{
+  display: flex;
+  flex-wrap: nowrap;
+  margin-left: -50px;
+}
+
+.pre-recquis li{
+  list-style-position: inside;
+  margin: 20px;
+  background-color: rgb(11, 11, 51);;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.inscription-card{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 40px;
+  color: black;
+  margin: 30px;
+}
+
+.inscription h2{
+  color: white;
+  text-align: center;
+}
+
+.form-card{
+  background-color: white;
+  padding: 0 20px;
+  border-radius: 10px 10px 10px 50px ;
+}
+
+.form-card img{
+  width: 30%;
+  height: 30%;
+}
+
+.contact{
+  text-align: center;
+}
+
+.contact ul{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.contact li{
+  margin: 20px;
+}
+
+.contact a{
+   text-decoration: none;
+   background-color: #0D73E2;
+   color: white;
+   padding: 10px;
+   border-radius: 20px;
+}
