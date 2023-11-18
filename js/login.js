@@ -22,7 +22,6 @@ document.addEventListener("DOMContentLoaded",  () => {
             if(data.error) {
                 return error.textContent = data.error;
             } else {
-                console.log(data)
                 localStorage.setItem('token', data.token);
                 window.location.href = "./profile.html";
             }

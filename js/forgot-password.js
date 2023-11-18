@@ -1,8 +1,6 @@
-firebase.initializeApp(firebaseConfig);
 
 document.addEventListener("DOMContentLoaded",  () => {
 
-    let auth = firebase.auth();
     let form = document.getElementById("reset");
     let success = document.getElementById("success");
     let error = document.getElementById("error")
@@ -13,13 +11,26 @@ document.addEventListener("DOMContentLoaded",  () => {
         let email = document.getElementById("email").value;
 
         if(email && email != "") {
-            auth.sendPasswordResetEmail(email)
-            .then(() => {
-                success.textContent = "E-mail envoyé, verifiez votre boîte mail.";
+            fetch('http://127.0.0.1:5000/forgotpassword', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({email, password}),
+            })
+            .then(response => {
+                if(response.status == 200 || response.status == 403 || response.status == 401) return response.json();
+            })
+            .then(data => {
+                if(data.error) {
+                    return error.textContent = data.error;
+                } else {
+                    return success.textContent = "E-mail de réinitialisation de mot de passe envoyé !"
+                }
             })
             .catch(e => {
-                console.error("Erreur :" + e);
-                error.textContent = "Ereur lors de l'envoie du mail.";
+                console.log(`[WEB ERROR][LOGIN] - ${e}`);
+                return error.textContent = "Erreur interne. Contactez un administrateur."
             });
         }
     });
