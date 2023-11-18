@@ -1,147 +1,165 @@
-firebase.initializeApp(firebaseConfig);
-const database = firebase.firestore()
+document.addEventListener("DOMContentLoaded", () => {
+    let token = localStorage.getItem('token');
 
-firebase.auth().onAuthStateChanged(async user => {
-    if (user) {
-
-        // SESSION
-        let userName = null;
-        let userEmail = user.email;
-        let isAdmin = false;
-
-        const userRef = database.collection("users").doc(userEmail);
-        const doc = await userRef.get();
-
-        if (doc.exists) {
-            const userData = doc.data();
-            
-            userName = userData.identifiant;
-            isAdmin = userData.admin;
+    fetch(`http://127.0.0.1:5000/getuser/${token}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    })
+    .then(response => {
+        if(response.status == 200) return response.json();
+        if(response.status == 403 || response.status == 401) return window.location.href = "./login.html";
+    })
+    .then(data => {
+        if(data) {
+            // CONNEXION
+            let username = data.username;
+            let email = data.email;
+            let role = data.role;
 
             let htmlUsername = document.getElementById("profile-username");
             let htmlEmail = document.getElementById("profile-email");
 
-            htmlUsername.textContent = userName;
-            htmlEmail.textContent = userEmail;
-        } else {
-            console.log("Aucun document trouvé pour cet utilisateur.");
-        }
+            htmlUsername.textContent = username;
+            htmlEmail.textContent = email;
 
-        // LOGOUT
-
-        let logoutButton = document.getElementById("logout");
+            // DECONNEXION
+            let logoutButton = document.getElementById("logout");
         
-        logoutButton.addEventListener("click", e => {
-            
-            firebase.auth().signOut()
-            .then(() => {
+            logoutButton.addEventListener("click", e => {
+                
+                fetch(`http://127.0.0.1:5000/logout`, {
+                    method: 'post',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                })
+                .then(response => {
+                    if(response.status == 200) {
+                        console.log({succes: "Succesfully deconnected"});
 
-                console.log("Déconnexion réussie.");
-                window.location.href = "./login.html"
-            }).catch(e => {
-                console.error("Erreur lors de la déconnexion : ", e);
+                        localStorage.removeItem('token');
+                        window.location.href = "./login.html";
+                    } else {
+                        console.error("Erreur lors de la déconnexion : ", response.statusText);
+                    }
+                }).catch(e => {
+                    console.error("Erreur lors de la déconnexion : ", e);
+                });
             });
-        });
-        
-        // MODIFICATIONS
 
-        //let emailB = document.getElementById("email-button");
-        let usernameB = document.getElementById("username-button");
-        let passwordB = document.getElementById("password-button");
+            // MODIFICATIONS
+            let usernameB = document.getElementById("username-button");
+            let passwordB = document.getElementById("password-button");
 
-        //let newEmail = document.getElementById("new-email");
-        let newUsername = document.getElementById("new-username");
-        let newPassword = document.getElementById("new-password");
+            let newUsername = document.getElementById("new-username");
+            let newPassword = document.getElementById("new-password");
 
-        let success = document.getElementById("success");
-        let error = document.getElementById("error")
+            let error = document.getElementById("error")
 
-        // EMAIL
-        /*emailB.addEventListener("click", e => {
-            
-            newEmail = newEmail.value;
+            // MOT DE PASSE
+            passwordB.addEventListener("click", e => {
 
-            if(user.emailVerified) {
-                if(newEmail && newEmail != userEmail && newEmail != "") {
-
-                    user.updateEmail(newEmail)
-                    .then(() => {
-
-                        userRef.update({
-                            admin: isAdmin,
-                            email: newEmail,
-                            identifiant: userName
-                        }).then(() => {
-
-                            user.sendEmailVerification()
-                            .catch(e => {
-                                console.error("Erreur :", e);
-                            });
-
+                newPassword = newPassword.value;
+                
+                if(newPassword && newPassword != "") {
+                    fetch(`http://127.0.0.1:5000/changeprofile`, {
+                        method: 'post',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({newPassword, email, token})
+                    })
+                    .then(response => {
+                        if(response.status == 200) {
+                            console.log({succes: `Password changed`});
                             window.location.href = "./profile.html"
-                        }).catch(e => {
-                            console.error("Erreur :", e);
-                            error.textContent = "Erreur.";
-                        });
-                        
+                        } else {
+                            console.log(`[WEB ERROR][CHANGE PROFILE] - ${e}`);
+                            return error.textContent = "Erreur interne. Contactez un administrateur."
+                        }
                     }).catch(e => {
-                        console.error("Erreur :", e);
-                        error.textContent = "Erreur.";
+                        console.log(`[WEB ERROR][CHANGE PROFILE] - ${e}`);
+                        return error.textContent = "Erreur interne. Contactez un administrateur."
                     });
                 } else {
                     error.textContent = "Modification impossible (Recharger la page peut résoudre le problème)"
                 }
-            } else {
-                error.textContent = "Adresse E-mail non vérifiée."
-            }
-        })*/
+            })
 
-        // IDENTIFIANT
-        usernameB.addEventListener("click", e => {
+            // USERNAME
+            usernameB.addEventListener("click", e => {
 
-            newUsername = newUsername.value;
-            
-            if(newUsername && newUsername != "") {
-                userRef.update({
-                    admin: isAdmin,
-                    email: userEmail,
-                    identifiant: newUsername
-                }).then(() => {
-                    
-                    window.location.href = "./profile.html"
-                }).catch(e => {
-                    console.error("Erreur :", e);
-                    error.textContent = "Erreur.";
-                });
-            } else {
-                error.textContent = "Modification impossible (Recharger la page peut résoudre le problème)"
-            }
-        })
+                newUsername = newUsername.value;
+                
+                if(newUsername && newUsername != "") {
+                    fetch(`http://127.0.0.1:5000/changeprofile`, {
+                        method: 'post',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({newUsername, email})
+                    }).then(response => {
+                        if(response.status == 200) {
 
-        // MOT DE PASSE
-        passwordB.addEventListener("click", e => {
+                            updateProfil(newUsername, email, token);
 
-            newPassword = newPassword.value;
-            
-            if(newPassword && newPassword != "") {
-                user.updatePassword(newPassword)
-                    .then(() => {
-                        
-                        window.location.href = "./profile.html"
-                    }).catch(e => {
-                        if(e.code == "auth/requires-recent-login") {
-                            error.textContent = "Erreur, reconnectez vous puis réessayer."
+                            console.log({succes: `Username changed`});
                         } else {
-                            console.error("Erreur :", e);
-                            error.textContent = "Erreur.";
+                            console.log(`[WEB ERROR][CHANGE PROFILE] - ${e}`);
+                            return error.textContent = "Erreur interne. Contactez un administrateur."
                         }
+                    }).catch(e => {
+                        console.log(`[WEB ERROR][CHANGE PROFILE] - ${e}`);
+                        return error.textContent = "Erreur interne. Contactez un administrateur."
                     });
-            } else {
-                error.textContent = "Modification impossible (Recharger la page peut résoudre le problème)"
-            }
-        })
+                } else {
+                    return error.textContent = "Modification impossible (Recharger la page peut résoudre le problème)"
+                }
+            })
 
-    } else {
-        window.location.href = "./login.html"
-    }
+        } else {
+            console.log(`[WEB ERROR][PROFILE] - Profile not found`)
+            return window.location.href = "./login.html"
+        }
+    })
+    .catch(e => {
+        console.log(`[WEB ERROR][GET TOKEN] - ${e}`);
+        return window.location.href = "./login.html"
+    });
 });
+
+function updateProfil(newUsername, email, token) {
+    
+    fetch(`http://127.0.0.1:5000/updateuser/${token}`, {
+        method: 'post',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({newUsername, email})
+    })
+    .then(response => {
+        if(response.status == 200) {
+            return response.json();
+        } else {
+            console.log(`[WEB ERROR][CHANGE PROFILE] - ${response.statusText}`)
+            return error.textContent = "Erreur interne. Contactez un administrateur."
+        }
+    })
+    .then(data => {
+        if(data) {
+            console.log("Succesfully update");
+            localStorage.removeItem('token');
+            localStorage.setItem('token', data.token);
+            
+            window.location.href = "./profile.html";
+        } else {
+            return error.textContent = "Erreur interne. Contactez un administrateur."
+        }
+    })
+    .catch(e => {
+        console.log(`[WEB ERROR][CHANGE PROFILE] - ${e}`);
+        return error.textContent = "Erreur interne. Contactez un administrateur."
+    });
+}

@@ -1,12 +1,13 @@
 {
 	"host": "127.0.0.1",
 	"port": 5000,
+	"jwtSecret": "Cyriac&MaximeOnTop",
 	"database": {
-		"host": "2.58.56.147",
+		"host": "sql11.freemysqlhosting.net",
 		"port": 3306,
-		"user": "root",
-		"password": "qjjzpKov",
-		"database": "CyberWatchdogs",
-		"connectionLimit": -1
+		"user": "sql11663149",
+		"password": "iT1AC4KCdn",
+		"database": "sql11663149",
+		"connectionLimit": 5
 	}
 }

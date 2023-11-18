@@ -67,7 +67,7 @@ function createTicket() {
         closePopup();
         listTicket();
     })
-    .catch(e => console.error(e));""
+    .catch(e => console.error(e));
 }
 
 function listTicket() {
