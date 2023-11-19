@@ -42,7 +42,7 @@ div.panel div.ticket .right button {
 
     border: 0 solid;
     height: 32.5px;
-    width: 160px;
+    width: 200px;
     border-radius: 10px;
 
     transition: background-color 0.3s;
@@ -186,6 +186,7 @@ div.panel div.list button.ticket-card .left {
 div.panel div.list button.ticket-card .left h4,
 div.panel div.list button.ticket-card .left i {
     align-self: center;
+    margin-top: -10px;
     margin-right: 10px;
 }
 

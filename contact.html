@@ -51,12 +51,12 @@
 					<h3>Demandes</h3>
 				</div>
 				<div class="right">
-					<button id="list" onclick="listTicket()" type="submit"><i class="fa-solid fa-bars fa-sm" style="color: #ffffff;"></i> Liste de vos demandes</button>
+					<button id="list"><i class="fa-solid fa-bars fa-sm" style="color: #ffffff;"></i> Liste de vos demandes</button>
 					<button id="create" onclick="openPopup()" type="submit"><i class="fa-solid fa-plus fa-sm" style="color: #ffffff;"></i> Créer une demande</button>
 				</div>
 				
 				<div id="popup" class="popup">
-					<div class="popup-content">
+					<div class="popup-content"> 
 						<span class="close" onclick="closePopup()">&times;</span>
 						<form id="ticketForm">
 							
@@ -74,7 +74,7 @@
 								<textarea id="description" required></textarea>
 							</div>
 							
-							<button type="button" onclick="createTicket();">Créer</button>
+							<button id="ticketBtn" type="button">Créer</button>
 						</form>
 					</div>
 				</div>

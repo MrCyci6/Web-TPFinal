@@ -1,12 +1,1 @@
-{
-        "title": "Renseignement offre",
-        "description": "Je voudrais un renseignement",
-        "email": "cyriac.lenoir@isen-ouest.yncrea.fr",
-        "status": "open",
-        "messages": [
-            {
-                "utilisateur": "cyriac.lenoir@isen-ouest.yncrea.fr",
-                "message": "Je voudrais un renseignement"
-            }
-        ]
-    }
+{"title":"Renseignement offre","description":"Je voudrais un renseignement","email":"cyriac.lenoir@isen-ouest.yncrea.fr","status":"close","messages":[{"utilisateur":"cyriac.lenoir@isen-ouest.yncrea.fr","message":"Je voudrais un renseignement"},{"utilisateur":"cyriac.lenoir@isen-ouest.yncrea.fr","message":"jhgv"},{"utilisateur":"undefined","message":"qzd"},{"utilisateur":"Cyriac LENOIR","message":"qdqzd"},{"utilisateur":"Cyriac LENOIR","message":"qzdqzd"}]}
