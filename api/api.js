@@ -5,6 +5,8 @@ const cors = require('cors');
 const config = require('./config.json')
 
 const app = express()
+const morgan = require('morgan');
+app.use(morgan('dev'));
 app.use(cors());
 app.use(express.json())
 //app.set('view engine', 'ejs');
