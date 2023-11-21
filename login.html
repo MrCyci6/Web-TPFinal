@@ -1,102 +1,66 @@
 <!DOCTYPE html>
-<html lang="fr">
-    <head>
-        <meta charset="utf-8">
-        <title> CyberWatchdogs | Connexion</title>
-        <link rel="icon" types="image/png" href="./images/logo3.png">
-		<link rel="stylesheet" href="./styles/login.css">
-		<link rel="stylesheet" href="./styles/styles.css">
-        <link rel="stylesheet" href="./styles/navbar.css">
-        <link rel="stylesheet" href="./styles/footer.css">
+<html lang="en">
 
-        <script src="./js/login.js"></script>
-        <script src="./js/animation.js"></script>
-    </head>
-    <body>
-		<!-- NAVBAR -->
-        <header>
-            <nav>
-                <div class="left">
-                    <a href="./index.html">
-                        <img src="./images/logo3.png" alt="CyberWatchdogs Logo" height="80px">
-                    </a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="./styles/login.css">
+    <title>Cyberwatchdogs | Connexion</title>
+</head>
 
-                    <div class="separator"></div>
-					
-                    <a href="">Formations</a>
-                    <a href="">Offres</a>
-                    <a href="./equipe.html">Equipe</a>
+<body>
+
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form>
+                <h1>Créez un compte</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
                 </div>
-                <div class="right">
-                    <a href="">Contact</a>
-                    <a class="btn" href="./login.html">Connexion</a>
+                <span>ou utiliser votre e-mail pour vous inscrire</span>
+                <input type="text" placeholder="Nom d'utilisateur">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Mot de passe">
+                <button>Inscrivez-vous</button>
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form>
+                <h1>Connexion</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
                 </div>
-            </nav> 
-            <hr>            
-        </header>
-
-		<!-- LOGIN -->
-        <div class="login-card">
-			<div class="login-form">
-				<h2 class="login-title">Connexion</h2>
-				<form id="form">
-					<div class="form-group">
-						<label for="email">Adresse E-mail</label>
-						<input type="text" id="email" name="email" placeholder="Adresse E-mail" required>
-					</div>
-					<div class="form-group">
-						<label for="password">Mot de passe</label>
-						<input type="password" id="password" name="password" placeholder="Mot de passe" required>
-						<a id="forgot" href="./forgot-password.html">J'ai oublié mon mot de passe</a>
-					</div>
-					<button type="submit">Se connecter</button>
-				</form>
-				<div id="error"></div>
-			</div>
-		</div>
-
-		<!-- FOOTER -->
-		<hr class="footer">
-		<footer>
-			<div class="footer-section">
-				<div>
-					<h2>Informations</h2>
-					<ul>
-						<li><a href="">Mentions légales</a></li>
-						<li><a href="">Politique de confidentialité</a></li>
-						<li><a href="">Conditions d'utilisation</a></li>
-					</ul>
-				</div>
-			</div>
-		
-			<div class="footer-section">
-				<div>
-					<h2>Accessibilité</h2>
-					<ul>
-						<li><a href="">Accessibilité web</a></li>
-						<li><a href="">Aide à la navigation</a></li>
-						<li><a href="">Accessibilité pour tous</a></li>
-					</ul>
-				</div>
-			</div>
-          
-            <div class="footer-section">
-              	<div>
-                	<h2>Réseaux sociaux</h2>
-                	<ul>
-						<li><a href="https://github.com/CyberWatchdogs">Github</a></li>
-						<li><a href="https://x.com/CyberWatchdogs">Twitter</a></li>
-						<li><a href="https://instagram.com/CyberWatchdogs">Instagram</a></li>
-                	</ul>
-              	</div>
+                <span>ou utiliser votre email et votre mot de passe</span>
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Mot de passe">
+                <a href="#">Mot de passe oublié?</a>
+                <button>Connexion</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Bienvenue!</h1>
+                    <p>Entrer vos Identifiants pour accéder à tous les services de notre site!</p>
+                    <button class="hidden" id="login">Connexion</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Bienvenue!</h1>
+                    <p>Entrer vos Identifiants pour accéder à tous les services de notre site!</p>
+                    <button class="hidden" id="register">Inscrivez-vous</button>
+                </div>
             </div>
-		</footer>
+        </div>
+    </div>
 
-		<div class="copyright">
-			Tout droit réservé &copy; 2023
-		</div>
+    <script src="./js/login2.js"></script>
+</body>
 
-		<!-- ANIMATION -->
-		<canvas id="canvas"></canvas>
-    </body>
 </html>
