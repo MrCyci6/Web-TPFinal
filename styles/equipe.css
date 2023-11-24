@@ -82,4 +82,8 @@
         width: 100%;
         max-width: 1000px;
     }
+
+    .equipe-card a {
+        margin: 5% 1% 5%;
+    }
 }
