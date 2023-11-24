@@ -1,6 +1,6 @@
 div.card {
     height: calc(100px*6);
-    margin: 5% 0 7.5%;
+    margin: 5% 0 15%;
 
     display: flex;
     flex-direction: row;
@@ -31,8 +31,33 @@ div.card section div.top {
 div.card section div.bottom {
     background-color: #fff;
 
-    height: 65%;
-    
+    height: 75%;
+    padding: 5%;
+    text-align: center;
+
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
+}
+
+div.card section div.bottom #first {
+    margin-bottom: 10px;
+}
+
+div.card section div.bottom #last {
+    margin-top: 10px;
+}
+
+div.card section div.bottom a {
+    text-decoration: none;
+    background-color: #0D73E2;
+    color: #fff;
+
+    padding: 10px 15px;
+    border-radius: 15px;
+
+    transition: background-color 0.3s;
+}
+
+div.card section div.bottom a:hover {
+    background-color: #00B1F9;
 }
