@@ -1,6 +1,18 @@
 document.addEventListener("DOMContentLoaded",  () => {
-    const form = document.getElementById("form");
+    const form = document.getElementById("loginForm");
     const error = document.getElementById("error");
+    
+    const container = document.getElementById('container');
+    const registerBtn = document.getElementById('register');
+    const loginBtn = document.getElementById('login');
+    
+    registerBtn.addEventListener('click', () => {
+        container.classList.add("active");
+    });
+    
+    loginBtn.addEventListener('click', () => {
+        container.classList.remove("active");
+    });
       
     form.addEventListener("submit", e => {
         e.preventDefault();
@@ -19,11 +31,12 @@ document.addEventListener("DOMContentLoaded",  () => {
             if(response.status == 200 || response.status == 403 || response.status == 401) return response.json();
         })
         .then(data => {
+            if(!data) return error.textContent = "Erreur interne. Contactez un administrateur.";
             if(data.error) {
                 return error.textContent = data.error;
             } else {
                 localStorage.setItem('token', data.token);
-                window.location.href = "./profile.html";
+                window.location.href = "./profile.html"
             }
         })
         .catch(e => {

@@ -7,6 +7,13 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+div#error, div#RegError {
+    color: #ff0000;
+    font-weight: 600;
+    padding-top: 20px;
+    text-align: center;
+}
+
 body{
     background-color: rgb(5,5,47);
     background: linear-gradient(to right, rgb(5,5,47), #0e0d52);

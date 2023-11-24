@@ -20,8 +20,9 @@ document.addEventListener("DOMContentLoaded",  () => {
 
             listTicket(role);
             
-            let list = document.getElementById("list");
-            list.addEventListener("click", event => {
+            let listForm = document.getElementById("listForm");
+            listForm.addEventListener("submit", event => {
+                console.log(event)
                 event.preventDefault();
                 listTicket(role);
             });
@@ -136,6 +137,7 @@ function closeTicket(ticket) {
 
 // Lecture de Ticket
 function readTicket(number, email, username, role) {
+
     const replace = document.getElementById("replace");
     const list = document.getElementsByClassName("list")[0];
 

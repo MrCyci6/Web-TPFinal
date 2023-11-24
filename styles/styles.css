@@ -3,18 +3,14 @@
   src: url("../fonts/montserrat/Montserrat-VariableFont_wght.ttf");
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: "Montserrat", sans-serif; 
-  background-color: rgb(5,5,47);
-  background-color: radial-gradient(circle, rgba(5,5,47,1) 0%, rgba(9,15,37,1) 67%);
+  font-family: "Montserrat", sans-serif;
+  background: linear-gradient(to right, rgb(5,5,47), #0e0d52);
   position: relative;
-  padding-bottom: 5px;
-  
-  /*background-image: url("../images/logo3-2.png");
-  background-repeat: no-repeat;
-  background-size: 25%;
-  background-position: center;
-  background-attachment: fixed;*/
 }
 
 /* animation */
@@ -28,6 +24,7 @@ canvas {
   height: 100%;
 }
 
+/* TITLE */
 div.top {
   height: calc(100px * 6);
   margin-bottom: 10%;
@@ -36,15 +33,14 @@ div.top {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
 
 div.top h1#first {
   color: #cac8c8;
   font-size: 350%;
 
-  margin-top: -2.5%;
-  margin-bottom: -3%;
+  margin-top: 2%;
+  margin-bottom: -2.5%;
 }
 
 div.top h1#sec {
@@ -77,19 +73,44 @@ div.top a.btn:hover {
   background-color: #00B1F9;
 }
 
-div.section {
-  padding-top: 2.5%;
+@media screen and (max-width: 730px) {
+  div.top h1#first,
+  div.top h1#sec {
+    text-align: center;
+  }
+
+  div.top a.btn {
+    padding: 2% 2.5%;
+  }
+}
+
+@media screen and (max-width: 435px) {
+  div.top p {
+    display: none;
+  }
+
+  div.top a.btn {
+    padding: 2% 3%;
+  }
+}
+
+/* PRESENTATION */
+
+section#presentation {
+  padding-top: 15%;
   padding-bottom: 2.5%;
   
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  /* background-color: aqua; */
+  
+  color: #cac8c8;
+  margin-bottom: 1%;
+  text-align: center;
 }
 
-div.section .presentation {
+section#presentation .presentation {
   margin-bottom: 20px;
 
   border-radius: 25px;
@@ -102,57 +123,85 @@ div.section .presentation {
   align-items: center;
 }
 
-div.section .presentation .image {
+section#presentation .presentation .image {
   flex: 1;
   margin: 0 2.5%;
 }
 
-div.section .presentation .image img {
+section#presentation .presentation .image img {
   border-radius: 10%;
+  width: 100%;
 }
 
-div.section .presentation .text {
+section#presentation .presentation .text {
   flex: 2;
 
   color: #cac8c8;
   background-color: rgb(11, 11, 51);
   border-radius: 10px;
-  height: calc(100px * 2.5);
+  height: 100%;
 
   display: flex;
   flex-direction: column;
-  justify-content: start;
 }
 
-div.section .presentation .text h3 {
+section#presentation .presentation .text h3 {
   margin-left: 2.5%;
   margin-bottom: 0.5%;
 }
 
-div.section .presentation .text p {
+section#presentation .presentation .text p {
   margin-left: 2.5%;
   margin-bottom: -1.5%;
 }
 
-div.section .presentation ul {
-  /*list-style-image: url("../svg/check-solid.svg");*/
+section#presentation .presentation ul {
   list-style-type: none;
 }
 
-div.section .presentation li {
-  padding-left: 2.5%;
+section#presentation .presentation li {
+  padding-left: 15px;
   background-image: url("../svg/check-solid.svg");
   background-size: 10px;
   background-position: 0.5px;
   background-repeat: no-repeat;
 }
 
-div.section #chiffres {
-  color: #cac8c8;
-  margin-bottom: 1%;
+@media screen and (max-width: 1080px) {
+  section#presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section#presentation .presentation {
+    display: flex;
+    flex-direction: column;
+    margin: 0 1%;
+  }
+  
+  section#presentation .presentation .image {
+    display: none;
+    justify-content: center;
+  }
+  
+  section#presentation .presentation .text {
+    height: 100%;
+    width: 100%;
+    
+    margin-bottom: 5%;
+  }
 }
 
-div.section .cards {
+/* CHIFFRES */
+
+section#chiffres #chiffres {
+  color: #cac8c8;
+  margin-bottom: 1%;
+  text-align: center;
+}
+
+section#chiffres .cards {
   margin-top: 2.5%;
 
   display: flex;
@@ -164,14 +213,14 @@ div.section .cards {
   color: #cac8c8;
 }
 
-div.section article {
+section#chiffres article {
   position: relative;
   perspective: 300%;
   width: 300px;
   height: 300px;
 }
 
-div.section article header {
+section#chiffres article header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -179,18 +228,18 @@ div.section article header {
   margin-bottom: 18%;
 }
 
-div.section article header h2 {
+section#chiffres article header h2 {
   font-size: 20px;
   font-weight: 500;
   margin: 0;
 }
 
-div.section article img {
+section#chiffres article img {
   width: 35%;;
 }
 
-div.section article .front,
-div.section article .back {
+section#chiffres article .front,
+section#chiffres article .back {
   position: absolute;
   top: 0;
   left: 0;
@@ -205,23 +254,36 @@ div.section article .back {
   cursor: pointer;
 }
 
-div.section .back {
+section#chiffres .back {
   transform: rotateY(180deg);
 }
 
-div.section input {
+section#chiffres input {
   position: absolute;
   scale: 0;
 }
 
-div.section input:checked ~ article .back {
+section#chiffres input:checked ~ article .back {
   transform: rotateY(0);
 }
 
-div.section input:checked ~ article .front {
+section#chiffres input:checked ~ article .front {
   transform: rotateY(-180deg);
 } 
 
-div.section article .back p#top {
+section#chiffres article .back p#top {
   margin-top: 25%;
+}
+
+@media screen and (max-width: 435px) {
+  section#chiffres .cards {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2.5%;  
+
+    color: #cac8c8;
+  }
 }

@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .then(response => {
         if(response.status == 200) return response.json();
-        if(response.status == 403 || response.status == 401) return window.location.href = "./login.html";;
+        if(response.status == 403 || response.status == 401) return;
     })
     .then(data => {
         if(data) {
