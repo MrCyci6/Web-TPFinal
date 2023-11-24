@@ -75,7 +75,21 @@ div.top a.btn:hover {
 
 @media screen and (max-width: 950px) {
   div.top {
+    margin-top: -10%;
     margin-bottom: 0;
+  }
+
+  div.top h1#first {
+    color: #cac8c8;
+    font-size: 250%;
+  
+    margin-top: 2%;
+    margin-bottom: -2.5%;
+  }
+  
+  div.top h1#sec {
+    color: #0D73E2;
+    font-size: 250%;
   }
 }
 
@@ -96,7 +110,7 @@ div.top a.btn:hover {
   }
 
   div.top a.btn {
-    padding: 2% 3%;
+    padding: 4% 5%;
   }
 }
 
@@ -207,6 +221,7 @@ section#chiffres #chiffres {
 
 section#chiffres .cards {
   margin-top: 2.5%;
+  margin-bottom: 5%;
 
   display: flex;
   flex-direction: row;
