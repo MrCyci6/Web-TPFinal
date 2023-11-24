@@ -73,6 +73,12 @@ div.top a.btn:hover {
   background-color: #00B1F9;
 }
 
+@media screen and (max-width: 950px) {
+  div.top {
+    margin-bottom: 0;
+  }
+}
+
 @media screen and (max-width: 730px) {
   div.top h1#first,
   div.top h1#sec {
@@ -156,19 +162,13 @@ section#presentation .presentation .text p {
 }
 
 section#presentation .presentation ul {
+  margin-top: 10%;
   list-style-type: none;
-}
-
-section#presentation .presentation li {
-  padding-left: 15px;
-  background-image: url("../svg/check-solid.svg");
-  background-size: 10px;
-  background-position: 0.5px;
-  background-repeat: no-repeat;
 }
 
 @media screen and (max-width: 1080px) {
   section#presentation {
+    padding-top: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -194,6 +194,10 @@ section#presentation .presentation li {
 }
 
 /* CHIFFRES */
+
+section#chiffres {
+  margin-top: 15%;
+}
 
 section#chiffres #chiffres {
   color: #cac8c8;
@@ -275,15 +279,32 @@ section#chiffres article .back p#top {
   margin-top: 25%;
 }
 
+@media screen and (max-width: 950px) {
+  section#chiffres .cards {
+    flex-direction: column;
+  }
+
+  section#chiffres article {
+    margin-bottom: 5%;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  section#chiffres .cards {
+    flex-direction: column;
+  }
+
+  section#chiffres article {
+    margin-bottom: 5%;
+  }
+}
+
 @media screen and (max-width: 435px) {
   section#chiffres .cards {
-
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    gap: 2.5%;  
+  }
 
-    color: #cac8c8;
+  section#chiffres article {
+    margin-bottom: 5%;
   }
 }

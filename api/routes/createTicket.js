@@ -10,12 +10,21 @@ ticketCountMaj();
 router.post('/createTicket', (req, res) => {
 
     if(!req.body) return res.status(500).send({error: "Body undefined"});
-    const subject = req.body.subject;
-    const description = req.body.description;
+    const reqSubject = req.body.subject;
+    const reqDescription = req.body.description;
     const email = req.body.email;
-    if(!subject || !description || !email) {
+    if(!reqSubject || !reqDescription || !email) {
         return res.status(500).send({error: "Bad body format"});
     }
+
+    let description = "";
+    reqDescription.split("").forEach(char => {
+        description += char.replace('"', "'").replace(/\n/g, " ");
+    });
+    let subject = "";
+    reqSubject.split("").forEach(char => {
+        subject += char.replace('"', "'").replace(/\n/g, " ");
+    });
 
     const ticketContent = `{
         "title": "${subject}",
