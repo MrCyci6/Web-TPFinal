@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded",  () => {
         let email = document.getElementById("email").value;
 
         if(email && email != "") {
-            fetch('http://127.0.0.1:5000/forgotpassword', {
+            fetch('http://2.58.56.147:5001/forgotpassword', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

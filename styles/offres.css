@@ -5,12 +5,12 @@ div.card {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 div.card section {
     height: 100%;
-    width: 35%;
+    width: 30%;
 }
 
 div.card section div.top {
@@ -31,27 +31,41 @@ div.card section div.top {
 div.card section div.bottom {
     background-color: #fff;
 
-    height: 100%;
+    height: 60%;
     padding: 5%;
-    text-align: center;
 
     display: flex;
     flex-direction: column;
 
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
+
+    position: relative;
 }
 
-div.card section div.bottom #first {
-    margin-bottom: 10px;
+div.card section div.bottom p {
+    color: rgb(0, 68, 255);
+
+    font-weight: 650;
+    text-align: center;
+
+    padding: 1%;
+    margin: 10%
 }
 
-div.card section div.bottom #last {
-    margin-top: 10px;
+div.card section div.bottom ul {
+    list-style-type: none;
+    list-style-image: url("../svg/check-solid.svg");
+}
+
+div.card section div.bottom li {
+    margin-bottom: 2%;
+    color: #1c273b;
 }
 
 div.card section div.bottom a {
     text-decoration: none;
+    text-align: center;
     background-color: #0D73E2;
     color: #fff;
 
@@ -59,8 +73,20 @@ div.card section div.bottom a {
     border-radius: 15px;
 
     transition: background-color 0.3s;
+
+    position: absolute;
+    bottom: 5%;
+    left: 32.5%;
+    right: 32.5%;
 }
 
 div.card section div.bottom a:hover {
     background-color: #00B1F9;
+}
+
+@media screen and (max-width: 970px) {
+    div.card {
+        flex-direction: column;
+        justify-content: space-around;
+    }
 }

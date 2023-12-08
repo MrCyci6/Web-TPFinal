@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded",  () => {
     let token = localStorage.getItem('token');
 
-    fetch(`http://127.0.0.1:5000/getuser/${token}`, {
+    fetch(`http://2.58.56.147:5001/getuser/${token}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded",  () => {
                 const description = document.getElementById("description").value;
 
                 // Envoie d'une requête à l'api pour créer un ticket
-                fetch('http://127.0.0.1:5000/createTicket', {
+                fetch('http://2.58.56.147:5001/createTicket', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded",  () => {
                 const replace = document.getElementById("replace");
                 const list = document.getElementsByClassName("list")[0];
             
-                fetch(`http://127.0.0.1:5000/listTicket/${email}/${role}`, {
+                fetch(`http://2.58.56.147:5001/listTicket/${email}/${role}`, {
                     method: 'GET'
                 })
                 .then(response => {
@@ -122,7 +122,7 @@ function closePopup() {
 function closeTicket(ticket) {    
     const number = ticket.toString().padStart(3, '0');
 
-    fetch('http://127.0.0.1:5000/closeTicket', {
+    fetch('http://2.58.56.147:5001/closeTicket', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -141,7 +141,7 @@ function readTicket(number, email, username, role) {
     const replace = document.getElementById("replace");
     const list = document.getElementsByClassName("list")[0];
 
-    fetch(`http://127.0.0.1:5000/readTicket/${number.toString().padStart(3, '0')}/${email}/${role}`, {
+    fetch(`http://2.58.56.147:5001/readTicket/${number.toString().padStart(3, '0')}/${email}/${role}`, {
         method: 'GET'
     })
     .then(response => {
@@ -191,7 +191,7 @@ function writeTicket(ticket, username) {
     const message = document.getElementById("text").value;
     const number = ticket.toString().padStart(3, '0');
 
-    fetch('http://127.0.0.1:5000/writeTicket', {
+    fetch('http://2.58.56.147:5001/writeTicket', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

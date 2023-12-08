@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded",  () => {
             y: canvas.height,
             rayon: Math.random() * 1,
             vitesseY: Math.random() * 1 + 0.5, 
-            couleur: "rgba(52, 152, 219, 0.7)"
+            couleur: "rgba(15, 86, 219, 1)"
         };
         bulles.push(bulle);
     }

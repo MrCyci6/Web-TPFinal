@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     let token = localStorage.getItem('token');
 
-    fetch(`http://127.0.0.1:5000/getuser/${token}`, {
+    fetch(`http://2.58.56.147:5001/getuser/${token}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
         
             logoutButton.addEventListener("click", e => {
                 
-                fetch(`http://127.0.0.1:5000/logout`, {
+                fetch(`http://2.58.56.147:5001/logout`, {
                     method: 'post',
                     headers: {
                         'Content-Type': 'application/json',
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 newPassword = newPassword.value;
                 
                 if(newPassword && newPassword != "") {
-                    fetch(`http://127.0.0.1:5000/changeprofile`, {
+                    fetch(`http://2.58.56.147:5001/changeprofile`, {
                         method: 'post',
                         headers: {
                             'Content-Type': 'application/json',
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 newUsername = newUsername.value;
                 
                 if(newUsername && newUsername != "") {
-                    fetch(`http://127.0.0.1:5000/changeprofile`, {
+                    fetch(`http://2.58.56.147:5001/changeprofile`, {
                         method: 'post',
                         headers: {
                             'Content-Type': 'application/json',
@@ -132,7 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function updateProfil(newUsername, email, token) {
     
-    fetch(`http://127.0.0.1:5000/updateuser/${token}`, {
+    fetch(`http://2.58.56.147:5001/updateuser/${token}`, {
         method: 'post',
         headers: {
             'Content-Type': 'application/json',

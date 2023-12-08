@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     let token = localStorage.getItem('token');
 
-    fetch(`http://127.0.0.1:5000/getuser/${token}`, {
+    fetch(`http://2.58.56.147:5001/getuser/${token}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
         
             logoutButton.addEventListener("click", e => {
                 
-                fetch(`http://127.0.0.1:5000/logout`, {
+                fetch(`http://2.58.56.147:5001/logout`, {
                     method: 'post',
                     headers: {
                         'Content-Type': 'application/json',

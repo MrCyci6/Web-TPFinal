@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const password = document.getElementById("regPassword").value;
         const username = document.getElementById("username").value;
 
-        fetch('http://127.0.0.1:5000/register', {
+        fetch('http://2.58.56.147:5001/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

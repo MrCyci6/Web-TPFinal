@@ -10,7 +10,7 @@ header hr {
     margin-left: 100px;
     margin-right: 150px;
     border: none;
-    border-top: 1px solid #757575;
+    border-top: 1px solid #000;
 }
   
 nav {
@@ -85,7 +85,7 @@ nav a {
     font-weight: 500;
     padding: 0 20px;
     cursor: pointer;
-    color: #cac8c8;
+    color: #000;
     transition: color 0.3s;
 }
   
