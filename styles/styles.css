@@ -182,7 +182,7 @@ section#presentation .presentation .text p {
 section#presentation .presentation ul {
   margin-top: 10%;
   list-style-type: none;
-  color: #464646;
+  color: #464646; 
 }
 
 section#presentation .presentation li {
@@ -277,7 +277,7 @@ section#chiffres article .back {
   bottom: 0;
   text-align: center;
   backface-visibility: hidden;
-  background: rgb(11, 11, 51);
+  background: whitesmoke;
   border-radius: 10%;
   padding: 10%;
   transition: 0.6s;
