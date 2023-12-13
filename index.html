@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport"  content="width=device-width, initial-scale=0.1">
 	
-	<title> CyberWatchdogs | Acceuil </title>
+	<title> CyberWatchdogs | Accueil </title>
 	<link rel="icon" types="image/png" href="./images/logo3.png">
 	<link rel="stylesheet" href="./styles/styles.css">
 	<link rel="stylesheet" href="./styles/navbar.css">
@@ -19,28 +19,31 @@
 </head>
 <body>
 	<!-- NAVBAR -->
-	<header>
-		<nav>
-			<div class="left">
-				<a href="./index.html">
-					<img src="./images/logo3.png" alt="CyberWatchdogs Logo" height="80px">
-				</a>
-				
-				<div class="separator"></div>
-				
-				<a id="responsive" href="./formations.html">Formations</a>
-				<a id="responsive" href="./offres.html">Offres</a>
-				<a id="responsive" href="./equipe.html">Equipe</a>
-			</div>
-			<div class="right">
-				<div id="is-connected">
-					<a href="">Contact</a>
-					<a class="btn" href="./login.html">Connexion</a>
-				</div>
-			</div>
-		</nav> 
-		<hr>            
-	</header>
+	<header class="container">
+        <nav>
+            <div class="page-header">
+                <div class="logo">
+                    <a href="./index.html">
+                        <img src="./images/logo/logo.jpg" alt="logo">
+                    </a>
+                </div>
+                <div class="overlay"></div>
+                <div class="icone">
+                    <button class="burger" onclick="toggleMenu()">
+                        <i class="fa-solid fa-bars"></i>
+                        <i class="fa-solid fa-close"></i>
+                    </button>
+                </div>
+                    <aside>
+                        <a href="./formations.html">Formations</a>
+                        <a href="./offres.html">Offres</a>
+                        <a href="./equipe.html">Equipe</a>
+                        <a href="./contact.html">Contact</a>
+                        <a href="./login.html" class="active">Connexion</a>
+                    </aside>
+            </div>
+        </nav>
+    </header>
 	
 	<!-- BODY -->
 	<!-- TITLE -->
@@ -64,7 +67,7 @@
 			</div>
 			<div class="text">
 				<h1>Nos locaux</h1>
-				<p>Nos locaux sont prêts à vous acceuillir vous et vos services.</p>
+				<p>Nos locaux sont prêts à vous accueillir vous et vos services.</p>
 				<p>En effet nous proposons également de l'hébergement dans les contrats
 					effectués avec nos équipes.</p>
 				<p>Il est également possible de mettre en place un IntraNet dans vos locaux, bien évidemment
@@ -235,4 +238,7 @@
 	<!-- ANIMATION -->
 	<canvas id="canvas"></canvas>
 </body>
+<script type="text/javascript">
+    const toggleMenu = () => document.body.classList.toggle("open");
+</script>
 </html>
