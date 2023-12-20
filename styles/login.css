@@ -15,8 +15,7 @@ div#error, div#RegError {
 }
 
 body{
-    background-color: rgb(5,5,47);
-    background: linear-gradient(to right, rgb(5,5,47), #0e0d52);
+    background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -214,6 +213,12 @@ body{
 
 .container.active .toggle-right{
     transform: translateX(200%);
+}
+
+.home{
+    position: absolute;
+    left: 20px;
+    top: 5px;
 }
 
 canvas {

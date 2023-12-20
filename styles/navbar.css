@@ -20,12 +20,9 @@ body {
     width: 50%;
 }
 
-.container {
-    position: fixed;
+header.container{
     box-shadow: 0 4px 17px rgba(0, 0, 0, .1);
     background: #fff;
-    position: sticky;
-    top: 0;
 }
 
 .page-header {
@@ -124,7 +121,7 @@ aside a:hover {
     .burger {
             position: fixed;
             z-index: 3;
-            top: 80px;
+            top: 17%;
             right: 20px;
             display: grid;
             place-items: center;
@@ -137,10 +134,10 @@ aside a:hover {
             color: black;
     }
 
-    aside a {
+    aside .menu a {
         display: flex;
         align-items: center;
-        height: 50%px;
+        height: 50%;
         font-size: 60%;
         margin-left: 10px;
       }

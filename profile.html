@@ -16,25 +16,31 @@
         
     </head>
     <body>
-        <header>
-            <nav>
-                <div class="left">
+      <header class="container">
+        <nav>
+            <div class="page-header">
+                <div class="logo">
                     <a href="./index.html">
-                        <img src="./images/logo3.png" alt="CyberWatchdogs Logo" height="80px">
+                        <img src="./images/logo/logo.jpg" alt="logo">
                     </a>
-                    <div class="separator"></div>
-                    <a href="">Formations</a>
-                    <a href="./offres.html">Offres</a>
-                    <a href="./equipe.html">Equipe</a>
                 </div>
-                <div class="right">
-                    <a href="./contact.html">Contact</a>
-                    <a class="btn-login" href="./profile.html"><i class="fa fa-user-circle"></i></a>
-					<button id="logout" type="submit"><i class="fa fa-window-close-o"></i></button>
+                <div class="overlay"></div>
+                <div class="icone">
+                    <button class="burger" onclick="toggleMenu()">
+                        <i class="fa-solid fa-bars"></i>
+                        <i class="fa-solid fa-close"></i>
+                    </button>
                 </div>
-            </nav> 
-            <hr>            
-        </header>
+                    <aside class="menu">
+                        <a href="./formations.html">Formations</a>
+                        <a href="./offres.html">Offres</a>
+                        <a href="./equipe.html">Equipe</a>
+                        <a href="./contact.html">Contact</a>
+                        <a href="./login.html" class="active">Connexion</a>
+                    </aside>
+            </div>
+        </nav>
+      </header>
         
         <div class="profile">
             <div class="profile-card">

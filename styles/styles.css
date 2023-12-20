@@ -5,6 +5,7 @@
 
 html {
   scroll-behavior: smooth;
+  zoom: initial;
 }
 
 body {
@@ -277,12 +278,23 @@ section#chiffres article .back {
   bottom: 0;
   text-align: center;
   backface-visibility: hidden;
-  background: whitesmoke;
+  background: transparent;
   border-radius: 10%;
   padding: 10%;
   transition: 0.6s;
   cursor: pointer;
 }
+
+section#chiffres article .front:hover,
+section#chiffres article .back:hover {
+  background-color: #f5f5f5;
+}
+
+section#chiffres article .back{
+  background-color: #f5f5f5;
+}
+
+
 
 section#chiffres .back {
   transform: rotateY(180deg);

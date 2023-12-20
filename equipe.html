@@ -17,28 +17,31 @@
 </head>
 <body>
 	<!-- NAVBAR -->
-	<header>
-		<nav>
-			<div class="left">
-				<a href="./index.html">
-					<img src="./images/logo3.png" alt="CyberWatchdogs Logo" height="80px">
-				</a>
-				
-				<div class="separator"></div>
-				
-				<a href="">Formations</a>
-				<a href="">Offres</a>
-				<a href="">Equipe</a>
-			</div>
-			<div class="right">
-				<div id="is-connected">
-					<a href="">Contact</a>
-					<a class="btn" href="./login.html">Connexion</a>
-				</div>
-			</div>
-		</nav> 
-		<hr>            
-	</header>
+	<header class="container">
+        <nav>
+            <div class="page-header">
+                <div class="logo">
+                    <a href="./index.html">
+                        <img src="./images/logo/logo.jpg" alt="logo">
+                    </a>
+                </div>
+                <div class="overlay"></div>
+                <div class="icone">
+                    <button class="burger" onclick="toggleMenu()">
+                        <i class="fa-solid fa-bars"></i>
+                        <i class="fa-solid fa-close"></i>
+                    </button>
+                </div>
+                    <aside class="menu">
+                        <a href="./formations.html">Formations</a>
+                        <a href="./offres.html">Offres</a>
+                        <a href="./equipe.html">Equipe</a>
+                        <a href="./contact.html">Contact</a>
+                        <a href="./login.html" class="active">Connexion</a>
+                    </aside>
+            </div>
+        </nav>
+    </header>
 	
 	<!-- BODY -->
 	<!-- Inspired from fronted joe -->
@@ -123,4 +126,7 @@
 	<!-- ANIMATION -->
 	<canvas id="canvas"></canvas>
 </body>
+<script type="text/javascript">
+    const toggleMenu = () => document.body.classList.toggle("open");
+</script>
 </html>

@@ -7,10 +7,15 @@ hr.footer {
 }
 
 footer {
-    color: #cac8c8;
+    color: #000;
     padding: 20px;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    background: #fff;
+    height: 200px;
 }
 
 .footer-section {
@@ -19,7 +24,7 @@ footer {
 
 .footer-section a {
     text-decoration: none;
-    color: #cac8c8;
+    color: #000;
     transition: color 0.3s;
 }
 
@@ -45,8 +50,9 @@ footer {
 }
 
 div.copyright {
-    color: #cac8c8;
+    color: #000;
     margin-bottom: 10px;
-    text-align: center; 
-    padding: 10px;
+    position: absolute;
+    left: 40%;
+    bottom: 0;
 }
