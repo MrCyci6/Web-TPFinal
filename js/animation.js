@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded",  () => {
         const bulle = {
             x: Math.random() * canvas.width,
             y: canvas.height,
-            rayon: Math.random() * 1,
+            rayon: 0.7,
             vitesseY: Math.random() * 1 + 0.5, 
             couleur: "rgba(15, 86, 219, 1)"
         };
