@@ -1,42 +1,20 @@
-div.panel {
-    margin: 2.5% auto 2.5%;
-    background-color: #0F0F3A;
-    border-radius: 15px;
+div.header {
+    background-color: #f5f5f5;
+    border-bottom: solid 4px #0D73E2;
 
-    padding: 0.01px;
-    height: calc(100px * 8);
-    width: calc(100px * 12);
-}
-
-div.panel h2.title {
-    text-align: center;
-    color: #0F0F3A;
-}
-
-div.panel h2.top {
-    margin-bottom: -1%;
-}
-
-div.panel div.ticket {
-    margin: 5% auto;
+    height: 100%;
+    width: 75%;
+    margin: 2% auto 0;
     padding: 1%;
-    border-radius: 5px;
+    border-radius: 10px;
 
-    height: calc(100px * 0.5);
-    width: calc(100px * 10);
-
-    background-color: #cacaca;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
 
-div.panel div.ticket .left {
-    color: #0F0F3A;
-}
-
-div.panel div.ticket .right button {
+div.header .right button {
     background-color: #0D73E2;
     color: #fff;
 
@@ -48,11 +26,11 @@ div.panel div.ticket .right button {
     transition: background-color 0.3s;
 }
 
-div.panel div.ticket .right button:hover {
+div.header .right button:hover {
     background-color: #00B1F9;
 }
 
-div.panel div.ticket div.popup {
+div.popup {
     display: none;
     position: fixed;
     top: 0;
@@ -62,7 +40,7 @@ div.panel div.ticket div.popup {
     background: rgba(0, 0, 0, 0.5);
 }
 
-div.panel div.ticket div.popup div.popup-content {
+div.popup div.popup-content {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -78,29 +56,29 @@ div.panel div.ticket div.popup div.popup-content {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-div.panel div.ticket div.popup div.popup-content h2 {
+div.popup div.popup-content h2 {
     text-align: center;
     margin-bottom: 30px;
 }
 
-div.panel div.ticket div.popup div.popup-content .flex {
+div.popup div.popup-content .flex {
     display: flex;
     flex-direction: row;
 }
 
-div.panel div.ticket div.popup div.popup-content p#first {
+div.popup div.popup-content p#first {
     font-weight: bold;
     margin-right: 15%;
     align-self: center;
 }
 
-div.panel div.ticket div.popup div.popup-content p#last {
+div.popup div.popup-content p#last {
     font-weight: bold;
     margin-right: 3.5%;
     margin-top: -0.1%;
 }
 
-div.panel div.ticket div.popup div.popup-content input#subject {
+div.popup div.popup-content input#subject {
     width: 280px;
     height: 25px;
     align-self: center;
@@ -108,14 +86,14 @@ div.panel div.ticket div.popup div.popup-content input#subject {
     overflow: auto;
 }
 
-div.panel div.ticket div.popup div.popup-content textarea#description {
+div.popup div.popup-content textarea#description {
     width: 280px;
     height: 240px;
     resize: none;
     overflow: auto;
 }
 
-div.panel div.ticket div.popup div.popup-content button {
+div.popup div.popup-content button {
     background-color: #0D73E2;
     color: #ffffff;
     font-weight: bold;
@@ -128,11 +106,11 @@ div.panel div.ticket div.popup div.popup-content button {
     margin-left: 45%;
 }
 
-div.panel div.ticket div.popup div.popup-content button:hover {
+div.popup div.popup-content button:hover {
     background-color: #00B1F9;
 }
 
-div.panel div.ticket div.popup span.close {
+div.popup span.close {
     position: absolute;
     margin-top: -10px;
     margin-left: 440px;
@@ -140,7 +118,7 @@ div.panel div.ticket div.popup span.close {
     cursor: pointer;
 }
 
-div.panel div.list {
+div.list {
     margin: 5% auto;
     padding: 2%;
     border-radius: 5px;
@@ -148,16 +126,16 @@ div.panel div.list {
     height: calc(100px * 1);
     width: calc(100px * 7);
 
-    background-color: #cacaca;
+    background-color: #f5f5f5;
     display: flex;
     flex-direction: column;
 
     overflow: auto;
 }
 
-div.panel div.list button.ticket-card {
+div.list button.ticket-card {
     background-color: #0F0F3A;
-    color: #cac8c8;
+    color: #f5f5f5;
     cursor: pointer;
     border: 0 solid;
 
@@ -174,55 +152,55 @@ div.panel div.list button.ticket-card {
     transition: transform 0.2s;
 }
 
-div.panel div.list button.ticket-card:hover {
+div.list button.ticket-card:hover {
     transform: scale(1.02);
 }
 
-div.panel div.list button.ticket-card .left {
+div.list button.ticket-card .left {
     display: flex;
     flex-direction: row;
 }
 
-div.panel div.list button.ticket-card .left h4,
-div.panel div.list button.ticket-card .left i {
+div.list button.ticket-card .left h4,
+div.list button.ticket-card .left i {
     align-self: center;
     margin-top: -10px;
     margin-right: 10px;
 }
 
-div.panel div.list button.ticket-card .right #open {
+div.list button.ticket-card .right #open {
     color: rgb(0, 255, 17);
     text-transform: uppercase;
     font-weight: bold;
 }
 
-div.panel div.list button.ticket-card .right #close {
+div.list button.ticket-card .right #close {
     color: rgb(255, 17, 0);
     text-transform: uppercase;
     font-weight: bold;
 }
 
-div.panel div.list div#replace header {
+div.list div#replace header {
     color: #0F0F3A;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-div.panel div.list div#replace h3 {
+div.list div#replace h3 {
     color: #0D73E2;
     margin-bottom: -1%;
 }
 
-div.panel div.list div#replace hr {
+div.list div#replace hr {
     height: 1px;
     width: 80%;
     margin: 0 auto 10px;
 }
 
-div.panel div.list div#replace div.message {
+div.list div#replace div.message {
     background-color: #0F0F3A;
-    color: #cac8c8;
+    color: #f5f5f5;
 
     width: 75%;
     padding: 1px;
@@ -234,22 +212,22 @@ div.panel div.list div#replace div.message {
     overflow-wrap: break-word;
 }
 
-div.panel div.list div#replace div.message h4,
-div.panel div.list div#replace div.message h6 {
+div.list div#replace div.message h4,
+div.list div#replace div.message h6 {
     margin-left: 10px;
 }
 
-div.panel div.list div#replace div.message h4 {
+div.list div#replace div.message h4 {
     margin-bottom: -2%;
 }
-div.panel div.list div.text-input form#message-form {
+div.list div.text-input form#message-form {
     margin-top: 10px;
     display: flex;
     flex-direction: row;
     align-items: end;
 }
 
-div.panel div.list div.text-input form#message-form textarea#text {
+div.list div.text-input form#message-form textarea#text {
     height: 100px;
     width: 80%;
     
@@ -261,7 +239,7 @@ div.panel div.list div.text-input form#message-form textarea#text {
     overflow-wrap: break-word;
 }
 
-div.panel div.list div.text-input form#message-form button#send-message {
+div.list div.text-input form#message-form button#send-message {
     background-color: #ffffff;
     border: 0.1px solid;
     border-color: #ffffff;
@@ -272,6 +250,6 @@ div.panel div.list div.text-input form#message-form button#send-message {
     margin-left: 1%;
 }
 
-div.panel div.list div.text-input form#message-form button#send-message:hover {
+div.list div.text-input form#message-form button#send-message:hover {
     background-color: #aaa8a8;
 }

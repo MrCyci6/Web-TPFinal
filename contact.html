@@ -43,51 +43,47 @@
     </header>
 	
 	<!-- MAIN -->
-	<div class="panel">
-		<!-- <h2 class="title top">Vous avez besoin d'un devis ou vous avez une question ?</h2>
-			<h2 class="title">Créez un ticket sans attendre !</h2> -->
+	<div class="header">
+		<div class="left">
+			<h2>Demandes</h2>
+		</div>
+		<div class="right">
+			<form id="listForm">
+				<button id="list" type="submit"><i class="fa-solid fa-bars fa-sm" style="color: #ffffff;"></i> Liste de vos demandes</button>
+				<button id="create" onclick="openPopup()"><i class="fa-solid fa-plus fa-sm" style="color: #ffffff;"></i> Créer une demande</button>
+			</form>
+		</div>
+	</div>
+
+	<div class="list">
+		<div id="replace">
+	</div>
+
 			
-			<div class="ticket">
-				<div class="left">
-					<h3>Demandes</h3>
-				</div>
-				<div class="right">
-					<form id="listForm">
-						<button id="list" type="submit"><i class="fa-solid fa-bars fa-sm" style="color: #ffffff;"></i> Liste de vos demandes</button>
-						<button id="create" onclick="openPopup()"><i class="fa-solid fa-plus fa-sm" style="color: #ffffff;"></i> Créer une demande</button>
-					</form>
+	<div id="popup" class="popup">
+		<div class="popup-content"> 
+			<span class="close" onclick="closePopup()">&times;</span>
+			<form id="ticketForm">
+				
+				<h2>Creation de demande</h2>
+				
+				<div class="flex">
+					<p id="first">Sujet</p>
+					<input type="text" id="subject" required>
 				</div>
 				
-				<div id="popup" class="popup">
-					<div class="popup-content"> 
-						<span class="close" onclick="closePopup()">&times;</span>
-						<form id="ticketForm">
-							
-							<h2>Creation de demande</h2>
-							
-							<div class="flex">
-								<p id="first">Sujet</p>
-								<input type="text" id="subject" required>
-							</div>
-							
-							<br>
-							
-							<div class="flex">
-								<p id="last">Description</p>
-								<textarea id="description" required></textarea>
-							</div>
-							
-							<button id="ticketBtn" type="button">Créer</button>
-						</form>
-					</div>
+				<br>
+				
+				<div class="flex">
+					<p id="last">Description</p>
+					<textarea id="description" required></textarea>
 				</div>
-			</div>
-
-			<div class="list">
-				<div id="replace">
-				</div>
-			</div>
+				
+				<button id="ticketBtn" type="button">Créer</button>
+			</form>
 		</div>
+	</div>
+</div>
 		
 	<!-- FOOTER -->
 	<footer>
