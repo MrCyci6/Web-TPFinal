@@ -1,3 +1,4 @@
+/* HEADER */
 div.header {
     background-color: #f5f5f5;
     border-bottom: solid 4px #0D73E2;
@@ -9,7 +10,6 @@ div.header {
     border-radius: 10px;
 
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
@@ -30,6 +30,147 @@ div.header .right button:hover {
     background-color: #00B1F9;
 }
 
+/* FOOTER */
+div.footer {
+    background-color: #f5f5f5;
+    border-bottom: solid 4px #0D73E2;
+
+    height: calc(100px * 1);
+    /* width: calc(100px * 7); */
+    width: 50%;
+    margin: 2% auto 2%;
+    padding: 1%;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: auto;
+}
+
+div.footer button.ticket-card {
+    background-color: white;
+    border: 0;
+    /* border-bottom: solid 4px #0D73E2; */
+
+    color: black;
+    cursor: pointer;
+
+    height: 105px;
+    width: 100%;
+    margin-bottom: 2%;
+    padding: 5%;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: space-between;
+
+    transition: transform 0.2s;
+}
+
+div.footer button.ticket-card:hover {
+    transform: scale(1.02);
+}
+
+div.footer button.ticket-card .left {
+    display: flex;
+}
+
+div.footer button.ticket-card .left h4,
+div.footer button.ticket-card .left i {
+    margin: auto 0 auto 10%;
+}
+
+div.footer button.ticket-card .right #open {
+    color: rgb(22, 207, 35);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+div.footer button.ticket-card .right #close {
+    color: rgb(255, 17, 0);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+div.footer header {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.footer h3 {
+    color: #0D73E2;
+    margin-bottom: -1%;
+}
+
+div.footer hr {
+    height: 0.1%;
+    width: 80%;
+    margin: 0 auto 10px;
+}
+
+div.footer div.message {
+    background-color: white;
+    color: black;
+
+    width: 80%;
+    padding: 1px;
+    margin: 2.5% 0 0 1%;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-bottom: 1px solid #00B1F9;
+
+    overflow-wrap: break-word;
+}
+
+div.footer div.message h6 {
+    margin-left: 1%;
+}
+
+div.footer div.message h4 {
+    margin-left: 1%;
+    margin-bottom: -2%;
+}
+
+div.footer div.text-input form#message-form {
+    margin: 2.5% 0 0 1%;
+    
+    display: flex;
+    align-items: end;
+}
+
+div.footer div.text-input form#message-form textarea#text {
+    height: 100px;
+    width: 80%;
+    
+    bottom: 0;
+
+    box-sizing: border-box;
+    resize: none;
+
+    overflow-wrap: break-word;
+}
+
+div.footer div.text-input form#message-form button#send-message {
+    background-color: #ffffff;
+
+    height: 50px;
+    width: 50px;
+    border: 0.1px solid #fff;
+    margin: 0 0 0 1%;
+    border-radius: 50px;
+
+    cursor: pointer;
+}
+
+div.footer div.text-input form#message-form button#send-message:hover {
+    background-color: #f5f5f5;
+}
+
+/* FORMULAIRE */
 div.popup {
     display: none;
     position: fixed;
@@ -116,140 +257,4 @@ div.popup span.close {
     margin-left: 440px;
     font-size: 20px;
     cursor: pointer;
-}
-
-div.list {
-    margin: 5% auto;
-    padding: 2%;
-    border-radius: 5px;
-
-    height: calc(100px * 1);
-    width: calc(100px * 7);
-
-    background-color: #f5f5f5;
-    display: flex;
-    flex-direction: column;
-
-    overflow: auto;
-}
-
-div.list button.ticket-card {
-    background-color: #0F0F3A;
-    color: #f5f5f5;
-    cursor: pointer;
-    border: 0 solid;
-
-    border-radius: 5px;
-    height: 30px;
-    width: 700px;
-    padding: 5%;
-    margin-bottom: 2%;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    transition: transform 0.2s;
-}
-
-div.list button.ticket-card:hover {
-    transform: scale(1.02);
-}
-
-div.list button.ticket-card .left {
-    display: flex;
-    flex-direction: row;
-}
-
-div.list button.ticket-card .left h4,
-div.list button.ticket-card .left i {
-    align-self: center;
-    margin-top: -10px;
-    margin-right: 10px;
-}
-
-div.list button.ticket-card .right #open {
-    color: rgb(0, 255, 17);
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-div.list button.ticket-card .right #close {
-    color: rgb(255, 17, 0);
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-div.list div#replace header {
-    color: #0F0F3A;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-div.list div#replace h3 {
-    color: #0D73E2;
-    margin-bottom: -1%;
-}
-
-div.list div#replace hr {
-    height: 1px;
-    width: 80%;
-    margin: 0 auto 10px;
-}
-
-div.list div#replace div.message {
-    background-color: #0F0F3A;
-    color: #f5f5f5;
-
-    width: 75%;
-    padding: 1px;
-    margin-top: 10px;
-    border-top-right-radius: 25px;
-    border-top-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-
-    overflow-wrap: break-word;
-}
-
-div.list div#replace div.message h4,
-div.list div#replace div.message h6 {
-    margin-left: 10px;
-}
-
-div.list div#replace div.message h4 {
-    margin-bottom: -2%;
-}
-div.list div.text-input form#message-form {
-    margin-top: 10px;
-    display: flex;
-    flex-direction: row;
-    align-items: end;
-}
-
-div.list div.text-input form#message-form textarea#text {
-    height: 100px;
-    width: 80%;
-    
-    bottom: 0;
-
-    box-sizing: border-box;
-    resize: none;
-
-    overflow-wrap: break-word;
-}
-
-div.list div.text-input form#message-form button#send-message {
-    background-color: #ffffff;
-    border: 0.1px solid;
-    border-color: #ffffff;
-    cursor: pointer;
-    height: 50px;
-    width: 50px;
-    border-radius: 50px;
-    margin-left: 1%;
-}
-
-div.list div.text-input form#message-form button#send-message:hover {
-    background-color: #aaa8a8;
 }

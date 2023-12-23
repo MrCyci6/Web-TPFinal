@@ -42,13 +42,13 @@ header.container{
     text-decoration: none;
 }
 
-aside {
+aside #is-connected {
     display: flex;
     gap: .6rem;
     list-style-type: none;
 }
 
-aside a {
+aside #is-connected a {
     display: inline-block;
     padding: .3rem 1rem;
     color: var(--nav-text);
@@ -63,8 +63,39 @@ aside a {
 
 
 
-aside a:hover {
+aside #is-connected a:hover {
     color: var(--primary-color);
+}
+
+aside #is-connected a.btn-login {
+    padding: 5px 15px;
+    margin-right: 5px;
+    background-color: #0D73E2;
+    color: #fff;
+    border-radius: 15px;
+    text-decoration: none;    
+    transition: background-color 0.3s;
+}
+
+aside #is-connected a.btn-login:hover {
+    color: #fff;
+    background-color: #00B1F9;
+}
+
+aside #is-connected button#logout {
+    padding: 10px 17px;
+    margin-right: 5px;
+    background-color: #0D73E2;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: background-color 0.3s;
+}
+
+aside #is-connected button#logout:hover {
+    color: #fff;
+    background-color: #00B1F9;
 }
 
 #click {
@@ -81,7 +112,7 @@ aside a:hover {
     color: var(--primary-color);
 }
 
-.active{
+#is-connected .active{
     background-color: var(--primary-color);
     border-radius: 10px;
     text-align: center;
@@ -89,7 +120,7 @@ aside a:hover {
     color: white;
 }
 
-.active:hover{
+#is-connected .active:hover{
     background-color: rgb(33, 172, 226);
     transition: 0.3s;
     color: white;
@@ -102,7 +133,7 @@ aside a:hover {
         height: auto;
     }
 
-    aside {
+    aside #is-connected {
         position: fixed;
         z-index: 2;
         top: 0;
@@ -134,7 +165,7 @@ aside a:hover {
             color: black;
     }
 
-    aside .menu a {
+    aside .menu #is-connected a {
         display: flex;
         align-items: center;
         height: 50%;
@@ -142,7 +173,7 @@ aside a:hover {
         margin-left: 10px;
       }
 
-    body.open aside{
+    body.open aside #is-connected{
         translate: 0;
         padding-top: 25px;
     }
@@ -167,11 +198,11 @@ aside a:hover {
         margin-left: 20px;
       }
 
-      aside a{
+      aside #is-connected a{
         color: #000;
       }
 
-      body.open aside {
+      body.open aside #is-connected {
         translate: 0;
       }
 
@@ -194,25 +225,25 @@ aside a:hover {
         opacity: 1;
       }
 
-    body.open aside {
+    body.open aside #is-connected {
         translate: 0;
     }
 
-    #click:checked~aside {
+    #click:checked~aside #is-connected {
         left: 0%;
         transition: all 0.3s ease;
     }
 }
 
 @media screen and (max-width: 710px){
-    aside{
+    aside #is-connected {
         position: absolute;
         top: 50%;
         right: 50%;
         display: none;
     }
     
-    body.open aside{
+    body.open aside #is-connected {
         display: block;
     }
 

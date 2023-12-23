@@ -8,22 +8,22 @@ document.addEventListener("DOMContentLoaded", () => {
         },
     })
     .then(response => {
+        console.log(response)
         if(response.status == 200) return response.json();
         if(response.status == 403 || response.status == 401) return window.location.href = "./login.html";
     })
     .then(data => {
         if(data) {
-            // CONNEXION
-            let username = data.username;
-            let email = data.email;
-            let role = data.role;
-
-            let htmlUsername = document.getElementById("profile-username");
-            let htmlEmail = document.getElementById("profile-email");
-
-            htmlUsername.textContent = username;
-            htmlEmail.textContent = email;
-
+            // NAVBAR INIT
+            let div = document.getElementById("is-connected");
+            
+            div.innerHTML = `
+            <a href="./offres.html">Offres</a>
+            <a href="./equipe.html">Equipe</a>
+            <a href="./contact.html">Contact</a>
+            <a class="btn-login" href="./profile.html"><i class="fa fa-user-circle"></i></a>
+            <button id="logout" type="submit"><i class="fa fa-window-close-o"></i></button>`
+        
             // DECONNEXION
             let logoutButton = document.getElementById("logout");
         
@@ -48,6 +48,18 @@ document.addEventListener("DOMContentLoaded", () => {
                     console.error("Erreur lors de la déconnexion : ", e);
                 });
             });
+
+
+            // CONNEXION
+            let username = data.username;
+            let email = data.email;
+            let role = data.role;
+
+            let htmlUsername = document.getElementById("profile-username");
+            let htmlEmail = document.getElementById("profile-email");
+
+            htmlUsername.textContent = username;
+            htmlEmail.textContent = email;
 
             // MODIFICATIONS
             let usernameB = document.getElementById("username-button");

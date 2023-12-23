@@ -27,7 +27,7 @@ canvas {
 /* TITLE */
 div.top {
   height: calc(100px * 5);
-  margin-bottom: -10%;
+  margin-bottom: 10%;
 
   display: flex;
   flex-direction: column;

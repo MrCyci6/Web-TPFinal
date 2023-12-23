@@ -20,18 +20,15 @@ document.addEventListener("DOMContentLoaded",  () => {
 
             listTicket(role);
             
-            let listForm = document.getElementById("listForm");
-            listForm.addEventListener("submit", event => {
-                console.log(event)
-                event.preventDefault();
+            let listBtn = document.getElementById("list");
+            listBtn.addEventListener("click", event => {
                 listTicket(role);
             });
 
             let ticketBtn = document.getElementById("ticketBtn");
             ticketBtn.addEventListener("click", event => {
-                event.preventDefault();
+                // event.preventDefault();
                 createTicket();
-                listTicket(role);
             });
 
             // Création de ticket
@@ -52,6 +49,7 @@ document.addEventListener("DOMContentLoaded",  () => {
                 .then(response => { 
                     document.getElementById("ticketForm").reset();
                     closePopup();
+                    listTicket(role);
                 })
                 .catch(e => console.error(e));
             }
@@ -59,7 +57,7 @@ document.addEventListener("DOMContentLoaded",  () => {
             // Liste de tous les tickets
             function listTicket(role) {
                 const replace = document.getElementById("replace");
-                const list = document.getElementsByClassName("list")[0];
+                const list = document.getElementsByClassName("footer")[0];
             
                 fetch(`http://2.58.56.147:5001/listTicket/${email}/${role}`, {
                     method: 'GET'
@@ -68,10 +66,10 @@ document.addEventListener("DOMContentLoaded",  () => {
                     return response.json();
                 })
                 .then(data => {
-                    if(!data) {
+                    if(data && data.length == 0) {
                         return replace.innerHTML = "Vous n'avez aucun ticket"
                     }
-                    console.log(data)
+
                     let htmlContent = "";
                     let i = 1;
                     data.forEach(ticket => {
@@ -84,7 +82,7 @@ document.addEventListener("DOMContentLoaded",  () => {
                         htmlContent += `
                             <button onclick="readTicket(${number}, '${email}', '${username}', '${role}')" class="ticket-card" type="submit">
                                 <div class="left">
-                                    <i class="fa-solid fa-address-book fa-2xl" style="color: #cac8c8;"></i>
+                                    <i class="fa-solid fa-address-book fa-2xl" style="color: #0D73E2;"></i>
                                     <h4>${title}</h4>
                                 </div>
                     
@@ -131,6 +129,7 @@ function closeTicket(ticket) {
     })
     .then(response => {
         console.log(response);
+        window.location.href = "./contact.html";
     })
     .catch(e => console.error(e));
 }
@@ -139,7 +138,7 @@ function closeTicket(ticket) {
 function readTicket(number, email, username, role) {
 
     const replace = document.getElementById("replace");
-    const list = document.getElementsByClassName("list")[0];
+    const list = document.getElementsByClassName("footer")[0];
 
     fetch(`http://2.58.56.147:5001/readTicket/${number.toString().padStart(3, '0')}/${email}/${role}`, {
         method: 'GET'
@@ -171,7 +170,7 @@ function readTicket(number, email, username, role) {
                 <div class="text-input">
                     <form id="message-form">
                         <textarea name="text-input" id="text" placeholder="Aidez moi s'il vous plait..." required></textarea>
-                        <button onclick="writeTicket(${data.number}, '${username}'); return false;" id="send-message"><i class="fa-solid fa-paper-plane fa-2xl" style="color: #0D73E2;"></i></button>
+                        <button onclick="writeTicket(${data.number}, '${email}', '${username}', '${role}'); return false;" id="send-message"><i class="fa-solid fa-paper-plane fa-2xl" style="color: #0D73E2;"></i></button>
                         <button onclick="closeTicket(${data.number}); return false;" id="send-message"><i class="fa-solid fa-x fa-2xl" style="color: #0D73E2;"></i></button>
                     </form>
                 </div>
@@ -186,10 +185,10 @@ function readTicket(number, email, username, role) {
 }
 
 // Ecriture dans un ticket
-function writeTicket(ticket, username) {
+function writeTicket(number, email, username, role) {
     
     const message = document.getElementById("text").value;
-    const number = ticket.toString().padStart(3, '0');
+    number = number.toString().padStart(3, '0');
 
     fetch('http://2.58.56.147:5001/writeTicket', {
         method: 'POST',
@@ -200,6 +199,7 @@ function writeTicket(ticket, username) {
     })
     .then(response => {
         console.log(response);
+        readTicket(number, email, username, role);
     })
     .catch(e => console.error(e));
 }
