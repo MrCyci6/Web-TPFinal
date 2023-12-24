@@ -17,8 +17,8 @@ document.addEventListener("DOMContentLoaded",  () => {
         const bulle = {
             x: Math.random() * canvas.width,
             y: canvas.height,
-            rayon: 0.4,
-            vitesseY: Math.random(), 
+            rayon: 0.2,
+            vitesseY: Math.random() * 0.8, 
             couleur: "rgba(15, 86, 219, 1)"
         };
         bulles.push(bulle);
