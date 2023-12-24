@@ -2,62 +2,100 @@
 <html lang="en">
 
 <head>
+    <!-- Meta tags for character set and viewport settings -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Page title and favicon -->
+    <title>Cyberwatchdogs | Connexion</title>
+    <link rel="icon" href="./images/logo3.png">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./styles/login.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    
+    <!-- Font Awesome icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="./styles/login.css">
-
+    
+    <!-- JavaScript files -->
     <script src="./js/animation.js"></script>
     <script src="./js/login.js"></script>
     <script src="./js/register.js"></script>
-    <title>Cyberwatchdogs | Connexion</title>
 </head>
 
 <body>
+
+    <!-- Body Content -->
+    <!-- Container for Sign-Up and Sign-In Forms -->
     <div class="container" id="container">
+        <!-- Sign-Up Form Container -->
         <div class="form-container sign-up">
             <form id="registerForm">
+                <!-- Sign-Up Form Header -->
                 <h1>Créez un compte</h1>
+                <!-- Social Icons (if any) -->
                 <div class="social-icons"></div>
+                <!-- Instruction for Sign-Up -->
                 <span>utiliser votre e-mail pour vous inscrire</span>
+                <!-- Input Fields for Sign-Up -->
                 <input id="username" type="text" placeholder="Nom d'utilisateur">
                 <input id="regEmail" type="email" placeholder="Email">
                 <input id="regPassword" type="password" placeholder="Mot de passe">
+                <!-- Sign-Up Button -->
                 <button type="submit">Inscrivez-vous</button>
+                <!-- Registration Error Message Container -->
                 <div id="RegError"></div>
             </form>
         </div>
+        
+        <!-- Sign-In Form Container -->
         <div class="form-container sign-in">
+            <!-- Home Link to Return to Homepage -->
             <div class="home">
                 <a href="./index.html"><span>🠔</span>retour a l'accueil</a>
             </div>
             <form id="loginForm">
+                <!-- Sign-In Form Header -->
                 <h1>Connexion</h1>
+                <!-- Social Icons (if any) -->
                 <div class="social-icons"></div>
+                <!-- Instruction for Sign-In -->
                 <span>utiliser votre email et votre mot de passe</span>
+                <!-- Input Fields for Sign-In -->
                 <input id="email" type="email" placeholder="Email">
                 <input id="password" type="password" placeholder="Mot de passe">
+                <!-- Forgot Password Link -->
                 <a href="#">Mot de passe oublié?</a>
+                <!-- Sign-In Button -->
                 <button type="submit">Connexion</button>
+                <!-- Sign-In Error Message Container -->
                 <div id="error"></div>
             </form>
         </div>
+
+        <!-- Toggle Container for Switching Between Sign-Up and Sign-In Forms -->
         <div class="toggle-container">
             <div class="toggle">
+                <!-- Panels for Welcome Message and Toggle Buttons -->
                 <div class="toggle-panel toggle-left">
                     <h1>Bienvenue!</h1>
                     <p>Entrer vos Identifiants pour accéder à tous les services de notre site!</p>
+                    <!-- Hidden Toggle Button for Sign-In -->
                     <button class="hidden" id="login">Connexion</button>
                 </div>
                 <div class="toggle-panel toggle-right">
                     <h1>Bienvenue!</h1>
                     <p>Entrer vos Identifiants pour accéder à tous les services de notre site!</p>
+                    <!-- Hidden Toggle Button for Sign-Up -->
                     <button class="hidden" id="register">Inscrivez-vous</button>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Animation Section -->
     <canvas id="canvas"></canvas>
 </body>
 
