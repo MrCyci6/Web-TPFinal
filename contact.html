@@ -57,27 +57,36 @@
     
     <!-- Body Content -->
 	<div class="header">
+        <!-- Header ticket Section with left and right divisions -->
 		<div class="left">
+            <!-- Left section containing the heading "Demandes" -->
 			<h2>Demandes</h2>
 		</div>
 		<div class="right">
+            <!-- Right section containing buttons for list and creating a new request -->
 			<button id="list" type="button"><i class="fa-solid fa-bars fa-sm" style="color: #ffffff;"></i> Liste de vos demandes</button>
 			<button id="create" onclick="openPopup()"><i class="fa-solid fa-plus fa-sm" style="color: #ffffff;"></i> Créer une demande</button>
 		</div>
 	</div>
 	
+    <!-- Footer ticket Section -->
 	<div class="footer">
 		<div id="replace">
+            <!-- Placeholder div with the ID "replace" -->
 		</div>
 		
-		
+        <!-- Popup Section -->
 		<div id="popup" class="popup">
+            <!-- Popup content for creating a new request -->
 			<div class="popup-content"> 
+                <!-- Close button for the popup -->
 				<span class="close" onclick="closePopup()">&times;</span>
+                <!-- Form for creating a new request -->
 				<form id="ticketForm">
 					
 					<h2>Creation de demande</h2>
 					
+                    <!-- Form fields for subject and description -->
 					<div class="flex">
 						<p id="first">Sujet</p>
 						<input type="text" id="subject" required>
@@ -90,6 +99,7 @@
 						<textarea id="description" required></textarea>
 					</div>
 					
+                    <!-- Button to submit the new request -->
 					<button id="ticketBtn" type="button">Créer</button>
 				</form>
 			</div>

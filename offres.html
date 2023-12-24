@@ -1,101 +1,119 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-      <!-- Meta tags for character set and viewport settings -->
-      <meta charset="utf-8">
-      <meta name="viewport"  content="width=device-width, initial-scale=0.1">
-      
-      <!-- Page title and favicon -->
-      <title> CyberWatchdogs | Accueil </title>
-      <link rel="icon" href="./images/logo3.png">
-      
-      <!-- Stylesheets -->
-      <link rel="stylesheet" href="./styles/offres.css">
-      <link rel="stylesheet" href="./styles/styles.css">
-      <link rel="stylesheet" href="./styles/navbar.css">
-      <link rel="stylesheet" href="./styles/footer.css">
-      
-      <!-- Font Awesome icons -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <script src="https://kit.fontawesome.com/c4352304cc.js" crossorigin="anonymous"></script>
-      
-      <!-- JavaScript files -->
-      <script src="./js/index.js"></script>
-      <script src="./js/animation.js"></script>
-  </head>
+<head>
+	<!-- Meta tags for character set and viewport settings -->
+	<meta charset="utf-8">
+	<meta name="viewport"  content="width=device-width, initial-scale=0.1">
+	
+	<!-- Page title and favicon -->
+	<title> CyberWatchdogs | Accueil </title>
+	<link rel="icon" href="./images/logo3.png">
+	
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="./styles/offres.css">
+	<link rel="stylesheet" href="./styles/styles.css">
+	<link rel="stylesheet" href="./styles/navbar.css">
+	<link rel="stylesheet" href="./styles/footer.css">
+	
+	<!-- Font Awesome icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://kit.fontawesome.com/c4352304cc.js" crossorigin="anonymous"></script>
+	
+	<!-- JavaScript files -->
+	<script src="./js/index.js"></script>
+	<script src="./js/animation.js"></script>
+</head>
 <body>
-  <!-- Navigation Bar -->
-  <header class="container">
-      <nav>
-          <div class="page-header">
-              <!-- Logo and hamburger menu -->
-              <div class="logo">
-                  <a href="./index.html">
-                      <img src="./images/logo/logo.jpg" alt="logo">
-                  </a>
-              </div>
-              <div class="overlay"></div>
-              <div class="icone">
-                  <button class="burger" onclick="toggleMenu()">
-                      <i class="fa-solid fa-bars"></i>
-                      <i class="fa-solid fa-close"></i>
-                  </button>
-              </div>
-              <!-- Menu items -->
-              <aside class="menu">
-                  <div id="is-connected">
-                      <a href="./offres.html">Offres</a>
-                      <a href="./equipe.html">Equipe</a>
-                      <a href="./contact.html">Contact</a>
-                      <a href="./login.html" class="active">Connexion</a>
-                  </div>
-              </aside>
-          </div>
-      </nav>
-  </header>
-  
-  <!-- Body Content -->
-  <div class="card">
-    <section>
-      <div class="top">
-        <h2>Particulier</h2>
-        <h4>Protégez votre vie en ligne avec notre expertise</h4>
-      </div>
-      <div class="bottom">
-        
-        <p>Une protection fiable et adaptée à vos besoins personnels</p>
-        
-        <ul>
-          <li>Antivirus de pointe</li>
-          <li>Protection des données personnelles</li>
-          <li>Formation à la cybersécurité</li>
-        </ul>
-        
-        <a class="btn" href="./contact.html">Rejoindre</a>
-      </div>
-    </section>
-    <section>
-      <div class="top">
-        <h2>Entreprise</h2>
-        <h4>Sécurisez votre entreprise avec notre expertise avancée</h4>
-      </div>
-      <div class="bottom">
-        
-        <p>Sécurisez vos opérations commerciales et rendez plus sûres vos données</p>
-        
-        <ul>
-          <li>Antivirus de pointe</li>
-          <li>Protection des données personnelles</li>
-          <li>Protection multi-niveaux</li>
-          <li>Analyse des vulnérabilités</li>
-          <li>Formation à la sécurité pour le personnel</li>
-        </ul>
-        
-        <a class="btn" href="./contact.html">Rejoindre</a>
-      </div>
-    </section>
-  </div>
-  
+	<!-- Navigation Bar -->
+	<header class="container">
+		<nav>
+			<div class="page-header">
+				<!-- Logo and hamburger menu -->
+				<div class="logo">
+					<a href="./index.html">
+						<img src="./images/logo/logo.jpg" alt="logo">
+					</a>
+				</div>
+				<div class="overlay"></div>
+				<div class="icone">
+					<button class="burger" onclick="toggleMenu()">
+						<i class="fa-solid fa-bars"></i>
+						<i class="fa-solid fa-close"></i>
+					</button>
+				</div>
+				<!-- Menu items -->
+				<aside class="menu">
+					<div id="is-connected">
+						<a href="./offres.html">Offres</a>
+						<a href="./equipe.html">Equipe</a>
+						<a href="./contact.html">Contact</a>
+						<a href="./login.html" class="active">Connexion</a>
+					</div>
+				</aside>
+			</div>
+		</nav>
+	</header>
+	
+	<!-- Body Content -->
+	<!-- Card Section -->
+	<div class="card">
+		<!-- Particulier Services Section -->
+		<section>
+			<!-- Top part of the card for Particulier -->
+			<div class="top">
+				<!-- Heading for Particulier -->
+				<h2>Particulier</h2>
+				<!-- Subtitle for Particulier -->
+				<h4>Protégez votre vie en ligne avec notre expertise</h4>
+			</div>
+
+			<!-- Bottom part of the card for Particulier -->
+			<div class="bottom">
+            	<!-- Description for Particulier -->
+				<p>Une protection fiable et adaptée à vos besoins personnels</p>
+
+				<!-- List of services for Particulier -->
+				<ul>
+					<li>Antivirus de pointe</li>
+					<li>Protection des données personnelles</li>
+					<li>Formation à la cybersécurité</li>
+				</ul>
+
+            	<!-- Button to Join for Particulier -->
+				<a class="btn" href="./contact.html">Rejoindre</a>
+			</div>
+		</section>
+
+    	<!-- Enterprise Services Section -->
+		<section>
+			<!-- Top part of the card for Entreprise -->
+			<div class="top">
+				<!-- Heading for Entreprise -->
+				<h2>Entreprise</h2>
+				<!-- Subtitle for Entreprise -->
+				<h4>Sécurisez votre entreprise avec notre expertise avancée</h4>
+			</div>
+
+			<!-- Bottom part of the card for Entreprise -->
+			<div class="bottom">
+				<!-- Description for Entreprise -->
+				<p>Sécurisez vos opérations commerciales et rendez plus sûres vos données</p>
+				
+				<!-- List of services for Entreprise -->
+				<ul>
+					<li>Antivirus de pointe</li>
+					<li>Protection des données personnelles</li>
+					<li>Protection multi-niveaux</li>
+					<li>Analyse des vulnérabilités</li>
+					<li>Formation à la sécurité pour le personnel</li>
+				</ul>
+				
+				<!-- Button to Join for Entreprise -->
+				<a class="btn" href="./contact.html">Rejoindre</a>
+			</div>
+		</section>
+	</div>
+	
 	<!-- Footer Section -->
 	<footer>
 		<!-- Information Section -->
