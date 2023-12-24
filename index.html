@@ -1,27 +1,33 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport"  content="width=device-width, initial-scale=0.1">
-	
-	<title> CyberWatchdogs | Accueil </title>
-	<link rel="icon" href="./images/logo3.png">
-	<link rel="stylesheet" href="./styles/styles.css">
-	<link rel="stylesheet" href="./styles/navbar.css">
-	<link rel="stylesheet" href="./styles/footer.css">
-	
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	
-	<script src="https://kit.fontawesome.com/c4352304cc.js" crossorigin="anonymous"></script>
-	
-	<script src="./js/index.js"></script>
-	<script src="./js/animation.js"></script>
-</head>
+	<head>
+		<!-- Meta tags for character set and viewport settings -->
+		<meta charset="utf-8">
+		<meta name="viewport"  content="width=device-width, initial-scale=0.1">
+		
+		<!-- Page title and favicon -->
+		<title> CyberWatchdogs | Accueil </title>
+		<link rel="icon" href="./images/logo3.png">
+		
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="./styles/styles.css">
+		<link rel="stylesheet" href="./styles/navbar.css">
+		<link rel="stylesheet" href="./styles/footer.css">
+		
+		<!-- Font Awesome icons -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://kit.fontawesome.com/c4352304cc.js" crossorigin="anonymous"></script>
+		
+		<!-- JavaScript files -->
+		<script src="./js/index.js"></script>
+		<script src="./js/animation.js"></script>
+	</head>
 <body>
-	<!-- NAVBAR -->
-	<header class="container">
+    <!-- Navigation Bar -->
+    <header class="container">
         <nav>
             <div class="page-header">
+                <!-- Logo and hamburger menu -->
                 <div class="logo">
                     <a href="./index.html">
                         <img src="./images/logo/logo.jpg" alt="logo">
@@ -34,32 +40,33 @@
                         <i class="fa-solid fa-close"></i>
                     </button>
                 </div>
-				<aside class="menu">
-					<div id="is-connected">
+                <!-- Menu items -->
+                <aside class="menu">
+                    <div id="is-connected">
                         <a href="./offres.html">Offres</a>
                         <a href="./equipe.html">Equipe</a>
                         <a href="./contact.html">Contact</a>
                         <a href="./login.html" class="active">Connexion</a>
-					</div>
-				</aside>
+                    </div>
+                </aside>
             </div>
         </nav>
     </header>
-	
-	<!-- BODY -->
+    
+    <!-- Body Content -->
 	<!-- TITLE -->
 	<div class="top">
 		<h1 id="first-title">Besoin d'une sécurité à</h1>
 		<h1 id="sec">toutes épreuves ?</h1>
-
+		
 		<div id="space"></div>
-
+		
 		<p>Découvrez notre équipe</p>
 		<p>et les services que nous proposons</p>
-
+		
 		<a class="btn" href="#presentation">Nous découvrir</a>
 	</div>
-
+	
 	<!-- PRESENTATION -->
 	<section id="presentation">
 		<div class="presentation">
@@ -71,15 +78,15 @@
 				<p>Nos locaux sont prêts à vous accueillir vous et vos services.</p>
 				<p>En effet nous proposons également de l'hébergement dans les contrats
 					effectués avec nos équipes.</p>
-				<p>Il est également possible de mettre en place un IntraNet dans vos locaux, bien évidemment
-					sécurisé comme il se doit par nos soins.</p>
-				<ul>
-					<li>Supervision <b>24h/24h</b></li>
-					<li>Déplacement sur place <b>gratuit</b></li>
-				</ul>	
+					<p>Il est également possible de mettre en place un IntraNet dans vos locaux, bien évidemment
+						sécurisé comme il se doit par nos soins.</p>
+						<ul>
+							<li>Supervision <b>24h/24h</b></li>
+							<li>Déplacement sur place <b>gratuit</b></li>
+						</ul>	
 			</div>
 		</div>
-		
+			
 		<div class="presentation">
 			<div class="text">
 				<h1>Nouvelles technologies</h1>
@@ -100,11 +107,11 @@
 			</div>
 		</div>
 	</section>
-
+			
 	<!-- ACTU -->
 	<section id="actu">
 		<h1 id="actus">Actualités</h1>
-
+		
 		<div class="cards">
 			<section>
 				<div>
@@ -122,42 +129,42 @@
 			</section>
 		</div>
 	</section>
-
+			
 	<!-- CHIFFRE -->
 	<section id="chiffres">
 		<h1 class="chiffres">Quelques chiffres</h1>
 		<p class="chiffres">Voici quelques chiffres qui peuvent vous convaincre...</p>
-
+		
 		<div class="cards">
 			<label>
 				<input type="checkbox"/>
 				<article id="first">
 					<div class="front">
-					  <header>
-						<h2>Clients</h2>
-						<i class="fa-solid fa-bars"></i>
-					  </header>
-					  <img src="./svg/city-solid.svg" alt="city svg">
-					  <p>Déjà <b>52</b> entreprises/particuliers nous font <b>confiance</b>.</p>
+						<header>
+							<h2>Clients</h2>
+							<i class="fa-solid fa-bars"></i>
+						</header>
+						<img src="./svg/city-solid.svg" alt="city svg">
+						<p>Déjà <b>52</b> entreprises/particuliers nous font <b>confiance</b>.</p>
 					</div>
 					<div class="back">
-					  <header>
-						<h2>Clients</h2>
-						<i class="fa-solid fa-x"></i>
-					  </header>
+						<header>
+							<h2>Clients</h2>
+							<i class="fa-solid fa-x"></i>
+						</header>
 						
-					  <p id="top">Tous nos clients sont <b>satisfait</b> de notre <b>intervention</b>.
-						Voyez par vous mêmes avec nos <b>avis</b>:
-					  </p>
-					  <p>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star"></i>
-						<i class="fa-solid fa-star-half"></i>
-						<br>
-						<i>Basé sur 32 avis</i>					
-					  </p>
+						<p id="top">Tous nos clients sont <b>satisfait</b> de notre <b>intervention</b>.
+							Voyez par vous mêmes avec nos <b>avis</b>:
+						</p>
+						<p>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star-half"></i>
+							<br>
+							<i>Basé sur 32 avis</i>					
+						</p>
 					</div>
 				</article>
 			</label>
@@ -166,96 +173,103 @@
 				<input type="checkbox"/>
 				<article id="middle">
 					<div class="front">
-					  <header>
-						<h2>Sécurité</h2>
-						<i class="fa-solid fa-bars"></i>
-					  </header>
-					  <img src="./svg/lock-solid.svg" alt="city svg">
-					  <p>Plus de <b>108</b> systèmes informatiques <b>sécurisés</b>.</p>
+						<header>
+							<h2>Sécurité</h2>
+							<i class="fa-solid fa-bars"></i>
+						</header>
+						<img src="./svg/lock-solid.svg" alt="city svg">
+						<p>Plus de <b>108</b> systèmes informatiques <b>sécurisés</b>.</p>
 					</div>
 					<div class="back">
-					  <header>
-						<h2>Sécurité</h2>
-						<i class="fa-solid fa-x"></i>
-					  </header>
+						<header>
+							<h2>Sécurité</h2>
+							<i class="fa-solid fa-x"></i>
+						</header>
 						
-					  <p>Nos équipes ont <b>contribués</b>, à la <b>sécurisation</b> de nombreux
-						systèmes, et ce n'est <b>pas prêt de s'arrêter</b>.
-						Nos statistiques de satisfaction sont <b>exponentiels</b>, tout comme
-						nos ingénieurs et leur travail.
-					  </p>
+						<p>Nos équipes ont <b>contribués</b>, à la <b>sécurisation</b> de nombreux
+							systèmes, et ce n'est <b>pas prêt de s'arrêter</b>.
+							Nos statistiques de satisfaction sont <b>exponentiels</b>, tout comme
+							nos ingénieurs et leur travail.
+						</p>
 					</div>
 				</article>
 			</label>
-
+			
 			<label>
 				<input type="checkbox"/>
 				<article id="last">
 					<div class="front">
-					  <header>
-						<h2>Alertes</h2>
-						<i class="fa-solid fa-bars"></i>
-					  </header>
-					  <img src="./svg/bell-solid.svg" alt="city svg">
-					  <p><b>26</b> états d'urgence <b>passés</b> avec succès.</p>
+						<header>
+							<h2>Alertes</h2>
+							<i class="fa-solid fa-bars"></i>
+						</header>
+						<img src="./svg/bell-solid.svg" alt="city svg">
+						<p><b>26</b> états d'urgence <b>passés</b> avec succès.</p>
 					</div>
 					<div class="back">
-					  <header>
-						<h2>Alertes</h2>
-						<i class="fa-solid fa-x"></i>
-					  </header>
+						<header>
+							<h2>Alertes</h2>
+							<i class="fa-solid fa-x"></i>
+						</header>
 						
-					  <p>Les états d'urgences ne sont plus qu'un <b>simple jeu</b>
-						grâce à nos <b>Responsables-Cyber</b> capables de coordonner une équipe
-						de <b>A à Z</b> sans problème.
-						Un taux de <b>100%</b> de réussite sur nos <b>urgences</b>.
-					  </p>
+						<p>Les états d'urgences ne sont plus qu'un <b>simple jeu</b>
+							grâce à nos <b>Responsables-Cyber</b> capables de coordonner une équipe
+							de <b>A à Z</b> sans problème.
+							Un taux de <b>100%</b> de réussite sur nos <b>urgences</b>.
+						</p>
 					</div>
 				</article>
 			</label>
 		</div>
 	</section>
-	
-	<!-- FOOTER -->
+			
+	<!-- Footer Section -->
 	<footer>
+		<!-- Information Section -->
 		<div class="footer-section">
-				<h2>Informations</h2>
-				<ul>
-					<li><a href="./cgu.html">Mentions légales</a></li>
-					<li><a href="./cgu.html">Politique de confidentialité</a></li>
-				</ul>
+			<h2>Informations</h2>
+			<!-- Links to legal and privacy pages -->
+			<ul>
+				<li><a href="./cgu.html">Mentions légales</a></li>
+				<li><a href="./cgu.html">Politique de confidentialité</a></li>
+			</ul>
 		</div>
 		
+		<!-- Accessibility Section -->
 		<div class="footer-section">
-				<h2>Accessibilité</h2>
-				<ul>
-					<li><a href="./offres.html">Services proposés</a></li>
-					<li><a href="./contact.html">Aide / Contact</a></li>
-					<li><a href="./login.html">Connexion / Inscription</a></li>
-				</ul>
+			<h2>Accessibilité</h2>
+			<!-- Links to services, help, and login/registration pages -->
+			<ul>
+				<li><a href="./offres.html">Services proposés</a></li>
+				<li><a href="./contact.html">Aide / Contact</a></li>
+				<li><a href="./login.html">Connexion / Inscription</a></li>
+			</ul>
 		</div>
 		
+		<!-- Social Media Section -->
 		<div class="footer-section">
-				<h2>Réseaux sociaux</h2>
-				<ul>
-					<li><a target="bank" href="https://github.com/CyberWatchdogs">Github</a></li>
-					<li><a target="bank" href="https://x.com/CyberWatchdogs">Twitter</a></li>
-					<li><a target="bank" href="https://instagram.com/CyberWatchdogs">Instagram</a></li>
-                    <li><a target="bank" href="mailto:cyberwatchdogs.factory@gmail.com">cyberwatchdogs.factory@gmail.com</a></li>
-				</ul>
+			<h2>Réseaux sociaux</h2>
+			<!-- Links to social media profiles and contact email -->
+			<ul>
+				<li><a target="bank" href="https://github.com/CyberWatchdogs">Github</a></li>
+				<li><a target="bank" href="https://x.com/CyberWatchdogs">Twitter</a></li>
+				<li><a target="bank" href="https://instagram.com/CyberWatchdogs">Instagram</a></li>
+				<li><a target="bank" href="mailto:cyberwatchdogs.factory@gmail.com">cyberwatchdogs.factory@gmail.com</a></li>
+			</ul>
 			
 		</div>
-	
+		
+		<!-- Copyright Information -->
 		<div class="copyright">
 			Tout droit réservé &copy; 2023
 		</div>
 	</footer>	
 	
 	
-	<!-- ANIMATION -->
+	<!-- Animation Section -->
 	<canvas id="canvas"></canvas>
-    <script>
-        const toggleMenu = () => document.body.classList.toggle("open");
-    </script>
+	<script>
+		const toggleMenu = () => document.body.classList.toggle("open");
+	</script>
 </body>
 </html>

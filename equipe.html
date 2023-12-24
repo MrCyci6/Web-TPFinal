@@ -1,26 +1,34 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport"  content="width=device-width, initial-scale=0.1">
-	<title> CyberWatchdogs | Equipe </title>
-	<link rel="icon" href="./images/logo3.png">
-	<link rel="stylesheet" href="./styles/styles.css">
-	<link rel="stylesheet" href="./styles/navbar.css">
-	<link rel="stylesheet" href="./styles/footer.css">
-	<link rel="stylesheet" href="./styles/equipe.css">
-	
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	
-	<script src="./js/index.js"></script>
-	<script src="./js/index.js"></script>
-	<script src="./js/animation.js"></script>
-</head>
+	<head>
+		<!-- Meta tags for character set and viewport settings -->
+		<meta charset="utf-8">
+		<meta name="viewport"  content="width=device-width, initial-scale=0.1">
+		
+		<!-- Page title and favicon -->
+		<title> CyberWatchdogs | Accueil </title>
+		<link rel="icon" href="./images/logo3.png">
+		
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="./styles/equipe.css">
+		<link rel="stylesheet" href="./styles/styles.css">
+		<link rel="stylesheet" href="./styles/navbar.css">
+		<link rel="stylesheet" href="./styles/footer.css">
+		
+		<!-- Font Awesome icons -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://kit.fontawesome.com/c4352304cc.js" crossorigin="anonymous"></script>
+		
+		<!-- JavaScript files -->
+		<script src="./js/index.js"></script>
+		<script src="./js/animation.js"></script>
+	</head>
 <body>
-	<!-- NAVBAR -->
-	<header class="container">
+    <!-- Navigation Bar -->
+    <header class="container">
         <nav>
             <div class="page-header">
+                <!-- Logo and hamburger menu -->
                 <div class="logo">
                     <a href="./index.html">
                         <img src="./images/logo/logo.jpg" alt="logo">
@@ -33,19 +41,20 @@
                         <i class="fa-solid fa-close"></i>
                     </button>
                 </div>
-				<aside class="menu">
-					<div id="is-connected">
+                <!-- Menu items -->
+                <aside class="menu">
+                    <div id="is-connected">
                         <a href="./offres.html">Offres</a>
                         <a href="./equipe.html">Equipe</a>
                         <a href="./contact.html">Contact</a>
                         <a href="./login.html" class="active">Connexion</a>
-					</div>
-				</aside>
+                    </div>
+                </aside>
             </div>
         </nav>
     </header>
-	
-	<!-- BODY -->
+    
+    <!-- Body Content -->
 	<!-- Inspired from fronted joe -->
 	<div class="equipe-section">
 		<div class="equipe-card">
@@ -86,43 +95,51 @@
 		</div>
 	</div>
 	
-		<!-- FOOTER -->
-		<footer>
-			<div class="footer-section">
-					<h2>Informations</h2>
-					<ul>
-						<li><a href="./cgu.html">Mentions légales</a></li>
-						<li><a href="./cgu.html">Politique de confidentialité</a></li>
-					</ul>
-			</div>
-			
-			<div class="footer-section">
-					<h2>Accessibilité</h2>
-					<ul>
-						<li><a href="./offres.html">Services proposés</a></li>
-						<li><a href="./contact.html">Aide / Contact</a></li>
-						<li><a href="./login.html">Connexion / Inscription</a></li>
-					</ul>
-			</div>
-			
-			<div class="footer-section">
-					<h2>Réseaux sociaux</h2>
-					<ul>
-						<li><a target="bank" href="https://github.com/CyberWatchdogs">Github</a></li>
-						<li><a target="bank" href="https://x.com/CyberWatchdogs">Twitter</a></li>
-						<li><a target="bank" href="https://instagram.com/CyberWatchdogs">Instagram</a></li>
-						<li><a target="bank" href="mailto:cyberwatchdogs.factory@gmail.com">cyberwatchdogs.factory@gmail.com</a></li>
-					</ul>
-				
-			</div>
-		
-			<div class="copyright">
-				Tout droit réservé &copy; 2023
-			</div>
-		</footer>	
-	
-	<!-- ANIMATION -->
-	<canvas id="canvas"></canvas>
+    <!-- Footer Section -->
+    <footer>
+		<!-- Information Section -->
+        <div class="footer-section">
+            <h2>Informations</h2>
+			<!-- Links to legal and privacy pages -->
+            <ul>
+                <li><a href="./cgu.html">Mentions légales</a></li>
+                <li><a href="./cgu.html">Politique de confidentialité</a></li>
+            </ul>
+        </div>
+        
+		<!-- Accessibility Section -->
+        <div class="footer-section">
+            <h2>Accessibilité</h2>
+			<!-- Links to services, help, and login/registration pages -->
+            <ul>
+                <li><a href="./offres.html">Services proposés</a></li>
+                <li><a href="./contact.html">Aide / Contact</a></li>
+                <li><a href="./login.html">Connexion / Inscription</a></li>
+            </ul>
+        </div>
+        
+		<!-- Social Media Section -->
+        <div class="footer-section">
+            <h2>Réseaux sociaux</h2>
+			<!-- Links to social media profiles and contact email -->
+            <ul>
+                <li><a target="bank" href="https://github.com/CyberWatchdogs">Github</a></li>
+                <li><a target="bank" href="https://x.com/CyberWatchdogs">Twitter</a></li>
+                <li><a target="bank" href="https://instagram.com/CyberWatchdogs">Instagram</a></li>
+                <li><a target="bank" href="mailto:cyberwatchdogs.factory@gmail.com">cyberwatchdogs.factory@gmail.com</a></li>
+            </ul>
+            
+        </div>
+        
+        <!-- Copyright Information -->
+        <div class="copyright">
+            Tout droit réservé &copy; 2023
+        </div>
+    </footer>	
+    
+    
+    <!-- Animation Section -->
+    <canvas id="canvas"></canvas>
     <script>
         const toggleMenu = () => document.body.classList.toggle("open");
     </script>
