@@ -2,6 +2,7 @@
 const express = require('express')
 const fs = require('fs')
 const cors = require('cors');
+const https = require('https');
 
 // Load configuration settings from config.json
 const config = require('./config.json')
@@ -33,9 +34,14 @@ fs.readdirSync("./routes").forEach(file => {
 	
 // Start the Express app and listen on the specified host and port
 try {
+	const options = {
+		key: fs.readFileSync('./certs/privkey.pem'),
+		cert: fs.readFileSync('./certs/cert.pem'),
+	};
+	const server = https.createServer(options, app);
 
 	let port = config.port
-	app.listen(port, config.host)
+	server.listen(port, config.host)
 	
 	console.log(`- API enabled on ${config.host}:${port}`)
 

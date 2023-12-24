@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded",  () => {
         const password = document.getElementById("password").value;
 
         // Send a request to the server for user authentication
-        fetch('http://2.58.56.147:5001/connect', {
+        fetch('https://2.58.56.147:5001/connect', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

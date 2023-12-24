@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const username = document.getElementById("username").value;
 
         // Send a request to the server to register a new user
-        fetch('http://2.58.56.147:5001/register', {
+        fetch('https://2.58.56.147:5001/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

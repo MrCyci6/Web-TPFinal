@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded",  () => {
         // Check if email is not empty
         if(email && email != "") {
             // Send a request to the forgotpassword endpoint
-            fetch('http://2.58.56.147:5001/forgotpassword', {
+            fetch('https://2.58.56.147:5001/forgotpassword', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

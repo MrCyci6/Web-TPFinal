@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded",  () => {
     let token = localStorage.getItem('token');
 
     // Fetch user information using the token
-    fetch(`http://2.58.56.147:5001/getuser/${token}`, {
+    fetch(`https://2.58.56.147:5001/getuser/${token}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded",  () => {
                 const description = document.getElementById("description").value;
 
                 // Send a request to create a new ticket
-                fetch('http://2.58.56.147:5001/createTicket', {
+                fetch('https://2.58.56.147:5001/createTicket', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded",  () => {
                 const list = document.getElementsByClassName("footer")[0];
             
                 // Fetch the list of tickets
-                fetch(`http://2.58.56.147:5001/listTicket/${email}/${role}`, {
+                fetch(`https://2.58.56.147:5001/listTicket/${email}/${role}`, {
                     method: 'GET'
                 })
                 .then(response => {
@@ -132,7 +132,7 @@ function closeTicket(ticket) {
     const number = ticket.toString().padStart(3, '0');
 
     // Send a request to close the specified ticket
-    fetch('http://2.58.56.147:5001/closeTicket', {
+    fetch('https://2.58.56.147:5001/closeTicket', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -152,7 +152,7 @@ function readTicket(number, email, username, role) {
     const list = document.getElementsByClassName("footer")[0];
 
     // Fetch the details of the specified ticket
-    fetch(`http://2.58.56.147:5001/readTicket/${number.toString().padStart(3, '0')}/${email}/${role}`, {
+    fetch(`https://2.58.56.147:5001/readTicket/${number.toString().padStart(3, '0')}/${email}/${role}`, {
         method: 'GET'
     })
     .then(response => {
@@ -204,7 +204,7 @@ function writeTicket(number, email, username, role) {
     number = number.toString().padStart(3, '0');
 
     // Send a request to add a new message to the specified ticket
-    fetch('http://2.58.56.147:5001/writeTicket', {
+    fetch('https://2.58.56.147:5001/writeTicket', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

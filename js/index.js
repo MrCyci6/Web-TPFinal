@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let token = localStorage.getItem('token');
 
     // Send a request to get user information using the token
-    fetch(`http://2.58.56.147:5001/getuser/${token}`, {
+    fetch(`https://2.58.56.147:5001/getuser/${token}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
         
             logoutButton.addEventListener("click", e => {
                 // Send a logout request
-                fetch(`http://2.58.56.147:5001/logout`, {
+                fetch(`https://2.58.56.147:5001/logout`, {
                     method: 'post',
                     headers: {
                         'Content-Type': 'application/json',

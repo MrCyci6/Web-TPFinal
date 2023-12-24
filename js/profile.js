@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let token = localStorage.getItem('token');
 
     // Send a request to the server to get user information based on the token
-    fetch(`http://2.58.56.147:5001/getuser/${token}`, {
+    fetch(`https://2.58.56.147:5001/getuser/${token}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
         
             logoutButton.addEventListener("click", e => {
                 // Send a logout request
-                fetch(`http://2.58.56.147:5001/logout`, {
+                fetch(`https://2.58.56.147:5001/logout`, {
                     method: 'post',
                     headers: {
                         'Content-Type': 'application/json',
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 
                 if(newPassword && newPassword != "") {
                     // Send a request to the server to change the user's password
-                    fetch(`http://2.58.56.147:5001/changeprofile`, {
+                    fetch(`https://2.58.56.147:5001/changeprofile`, {
                         method: 'post',
                         headers: {
                             'Content-Type': 'application/json',
@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 
                 if(newUsername && newUsername != "") {
                     // Send a request to the server to change the user's username
-                    fetch(`http://2.58.56.147:5001/changeprofile`, {
+                    fetch(`https://2.58.56.147:5001/changeprofile`, {
                         method: 'post',
                         headers: {
                             'Content-Type': 'application/json',
@@ -157,7 +157,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Function to update the user's profile with a new username
 function updateProfil(newUsername, email, token) {
-    fetch(`http://2.58.56.147:5001/updateuser/${token}`, {
+    fetch(`https://2.58.56.147:5001/updateuser/${token}`, {
         method: 'post',
         headers: {
             'Content-Type': 'application/json',
