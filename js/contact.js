@@ -1,6 +1,9 @@
+// Wait for the DOM content to be fully loaded before executing the script
 document.addEventListener("DOMContentLoaded",  () => {
+    // Retrieve the user token from local storage
     let token = localStorage.getItem('token');
 
+    // Fetch user information using the token
     fetch(`http://2.58.56.147:5001/getuser/${token}`, {
         method: 'GET',
         headers: {
@@ -8,18 +11,23 @@ document.addEventListener("DOMContentLoaded",  () => {
         },
     })
     .then(response => {
+        // Check the response status
         if(response.status == 200) return response.json();
+        // Redirect to the login page if unauthorized
         if(response.status == 403 || response.status == 401) return window.location.href = "./login.html";
     })
     .then(data => {
+        // If user data is available
         if(data) {
-            // CONNEXION
+            // Extract user details
             let username = data.username;
             let email = data.email;
             let role = data.role;
 
+            // Call the listTicket function to display tickets
             listTicket(role);
-            
+                        
+            // Attach event listeners to the "List" and "Create" buttons
             let listBtn = document.getElementById("list");
             listBtn.addEventListener("click", event => {
                 listTicket(role);
@@ -27,18 +35,15 @@ document.addEventListener("DOMContentLoaded",  () => {
 
             let ticketBtn = document.getElementById("ticketBtn");
             ticketBtn.addEventListener("click", event => {
-                // event.preventDefault();
                 createTicket();
             });
 
-            // Création de ticket
+            // Function to create a new ticket
             function createTicket() {
-                
-                // Récupération des variables nécessaires
                 const subject = document.getElementById("subject").value;
                 const description = document.getElementById("description").value;
 
-                // Envoie d'une requête à l'api pour créer un ticket
+                // Send a request to create a new ticket
                 fetch('http://2.58.56.147:5001/createTicket', {
                     method: 'POST',
                     headers: {
@@ -54,11 +59,12 @@ document.addEventListener("DOMContentLoaded",  () => {
                 .catch(e => console.error(e));
             }
 
-            // Liste de tous les tickets
+            // Function to list all tickets
             function listTicket(role) {
                 const replace = document.getElementById("replace");
                 const list = document.getElementsByClassName("footer")[0];
             
+                // Fetch the list of tickets
                 fetch(`http://2.58.56.147:5001/listTicket/${email}/${role}`, {
                     method: 'GET'
                 })
@@ -66,6 +72,7 @@ document.addEventListener("DOMContentLoaded",  () => {
                     return response.json();
                 })
                 .then(data => {
+                    // Display ticket information on the page
                     if(data && data.length == 0) {
                         return replace.innerHTML = "Vous n'avez aucun ticket"
                     }
@@ -101,6 +108,7 @@ document.addEventListener("DOMContentLoaded",  () => {
             }
 
         } else {
+            // Redirect to the login page if user data is not available
             window.location.href = "./login.html";
         }
     })
@@ -109,17 +117,21 @@ document.addEventListener("DOMContentLoaded",  () => {
     })
 })
 
+// Open the ticket creation popup
 function openPopup() {
     document.getElementById("popup").style.display = "block";
 }
 
+// Close the ticket creation popup
 function closePopup() {
     document.getElementById("popup").style.display = "none";
 }
 
+// Close a ticket
 function closeTicket(ticket) {    
     const number = ticket.toString().padStart(3, '0');
 
+    // Send a request to close the specified ticket
     fetch('http://2.58.56.147:5001/closeTicket', {
         method: 'POST',
         headers: {
@@ -134,12 +146,12 @@ function closeTicket(ticket) {
     .catch(e => console.error(e));
 }
 
-// Lecture de Ticket
+// Read a ticket and display its details
 function readTicket(number, email, username, role) {
-
     const replace = document.getElementById("replace");
     const list = document.getElementsByClassName("footer")[0];
 
+    // Fetch the details of the specified ticket
     fetch(`http://2.58.56.147:5001/readTicket/${number.toString().padStart(3, '0')}/${email}/${role}`, {
         method: 'GET'
     })
@@ -155,6 +167,7 @@ function readTicket(number, email, username, role) {
             </header>
         `;
 
+        // Display ticket messages
         data.messages.forEach(message => {
             htmlContent += `
                 <div class="message">
@@ -164,6 +177,7 @@ function readTicket(number, email, username, role) {
             `
         });
 
+        // If the ticket is open, display a text input for new messages
         if(data.status == "open") {
             
             htmlContent += `
@@ -184,12 +198,12 @@ function readTicket(number, email, username, role) {
     .catch(e => console.error(e));
 }
 
-// Ecriture dans un ticket
+// Write a message in a ticket
 function writeTicket(number, email, username, role) {
-    
     const message = document.getElementById("text").value;
     number = number.toString().padStart(3, '0');
 
+    // Send a request to add a new message to the specified ticket
     fetch('http://2.58.56.147:5001/writeTicket', {
         method: 'POST',
         headers: {
