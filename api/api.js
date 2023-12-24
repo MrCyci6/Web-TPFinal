@@ -34,10 +34,13 @@ fs.readdirSync("./routes").forEach(file => {
 	
 // Start the Express app and listen on the specified host and port
 try {
+	// Setup SSL Certificat for https connection
 	const options = {
 		key: fs.readFileSync('./certs/privkey.pem'),
 		cert: fs.readFileSync('./certs/cert.pem'),
 	};
+
+	// Create https server
 	const server = https.createServer(options, app);
 
 	let port = config.port
