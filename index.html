@@ -5,7 +5,7 @@
 	<meta name="viewport"  content="width=device-width, initial-scale=0.1">
 	
 	<title> CyberWatchdogs | Accueil </title>
-	<link rel="icon" types="image/png" href="./images/logo3.png">
+	<link rel="icon" href="./images/logo3.png">
 	<link rel="stylesheet" href="./styles/styles.css">
 	<link rel="stylesheet" href="./styles/navbar.css">
 	<link rel="stylesheet" href="./styles/footer.css">
@@ -49,7 +49,7 @@
 	<!-- BODY -->
 	<!-- TITLE -->
 	<div class="top">
-		<h1 id="first">Besoin d'une sécurité à</h1>
+		<h1 id="first-title">Besoin d'une sécurité à</h1>
 		<h1 id="sec">toutes épreuves ?</h1>
 
 		<div id="space"></div>
@@ -64,7 +64,7 @@
 	<section id="presentation">
 		<div class="presentation">
 			<div class="image">
-				<img src="./images/locaux.jpg" alt="Locaux"></img>
+				<img src="./images/locaux.jpg" alt="Locaux">
 			</div>
 			<div class="text">
 				<h1>Nos locaux</h1>
@@ -95,7 +95,7 @@
 					<li>Nos serveurs <b>possèdent</b> les <b>derniers technologies</b> d'hardware</li>
 				</ul>	
 			</div>
-			<div class="image" id ="last">
+			<div class="image">
 				<img src="./images/ia.jpg" alt="Nouvelles technologies">
 			</div>
 		</div>
@@ -103,7 +103,7 @@
 
 	<!-- ACTU -->
 	<section id="actu">
-		<h1 id="actu">Actualités</h1>
+		<h1 id="actus">Actualités</h1>
 
 		<div class="cards">
 			<section>
@@ -125,8 +125,8 @@
 
 	<!-- CHIFFRE -->
 	<section id="chiffres">
-		<h1 id="chiffres">Quelques chiffres</h3>
-		<p id="chiffres">Voici quelques chiffres qui peuvent vous convaincre...</p>
+		<h1 class="chiffres">Quelques chiffres</h1>
+		<p class="chiffres">Voici quelques chiffres qui peuvent vous convaincre...</p>
 
 		<div class="cards">
 			<label>
@@ -254,8 +254,8 @@
 	
 	<!-- ANIMATION -->
 	<canvas id="canvas"></canvas>
+    <script>
+        const toggleMenu = () => document.body.classList.toggle("open");
+    </script>
 </body>
-<script type="text/javascript">
-    const toggleMenu = () => document.body.classList.toggle("open");
-</script>
 </html>

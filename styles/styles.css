@@ -35,7 +35,7 @@ div.top {
   align-items: center;
 }
 
-div.top h1#first {
+div.top h1#first-title {
   color: #000;
   font-size: 350%;
 
@@ -219,7 +219,7 @@ section#presentation .presentation li {
 }
 
 /* ACTUALITES */
-section#actu h1#actu {
+section#actu h1#actus {
   color: #000;
   text-align: center;
   margin-bottom: 2.5%;
@@ -256,7 +256,7 @@ section#chiffres {
   margin-top: 15%;
 }
 
-section#chiffres #chiffres {
+section#chiffres .chiffres {
   color: #000;
   margin-bottom: 1%;
   text-align: center;
