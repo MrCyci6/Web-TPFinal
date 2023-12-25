@@ -1,3 +1,4 @@
+/* Styling for the card container */
 div.card {
     height: 600px;
     margin: 6% 0 10%;
@@ -8,15 +9,18 @@ div.card {
     justify-content: space-around;
 }
 
+/* Styling for each section within the card */
 div.card section {
     height: 100%;
     width: 30%;
 }
 
+/* Styling for the inner div of each section with box shadow */
 div.card section div {
-    box-shadow:  0 5px 15px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
 }
 
+/* Styling for the top section of each card with gradient background */
 div.card section div.top {
     background-color: rgb(0, 68, 255);
     background: linear-gradient(to right, rgb(0, 68, 255), #3c4eec);
@@ -32,6 +36,7 @@ div.card section div.top {
     color: #fff;
 }
 
+/* Styling for the bottom section of each card */
 div.card section div.bottom {
     background-color: #fff;
 
@@ -47,6 +52,7 @@ div.card section div.bottom {
     position: relative;
 }
 
+/* Styling for text in the bottom section of each card */
 div.card section div.bottom p {
     color: rgb(0, 68, 255);
 
@@ -57,16 +63,19 @@ div.card section div.bottom p {
     margin: 10%;
 }
 
+/* Styling for the unordered list in the bottom section of each card */
 div.card section div.bottom ul {
     list-style-type: none;
     list-style-image: url("../svg/check-solid.svg");
 }
 
+/* Styling for list items in the unordered list */
 div.card section div.bottom li {
     margin-bottom: 2%;
     color: #1c273b;
 }
 
+/* Styling for the button in the bottom section of each card */
 div.card section div.bottom a {
     text-decoration: none;
     text-align: center;
@@ -84,15 +93,18 @@ div.card section div.bottom a {
     right: 32.5%;
 }
 
+/* Hover styling for the button in the bottom section of each card */
 div.card section div.bottom a:hover {
     background-color: #00B1F9;
 }
 
+/* Media query for screen width up to 970px */
 @media screen and (max-width: 970px) {
     header {
         margin-bottom: 15%;
     }
 
+    /* Adjustments for the card container and each section within */
     div.card {
         height: 1250px;
         flex-direction: column;
@@ -105,11 +117,13 @@ div.card section div.bottom a:hover {
     }
 }
 
+/* Media query for screen width up to 650px */
 @media screen and (max-width: 650px) {
     header {
         margin-bottom: 15%;
     }
 
+    /* Adjustments for the card container and each section within */
     div.card {
         height: 1200px;
     }
@@ -119,17 +133,22 @@ div.card section div.bottom a:hover {
     }
 }
 
+/* Media query for screen width up to 350px */
 @media screen and (max-width: 350px) {
+    /* Further adjustments for the card container */
     div.card {
         height: 1500px;
     }
 
+    /* Adjustments for the button font size in the bottom section of each card */
     div.card section div.bottom a {
         font-size: 75%;
     }   
 }
 
+/* Media query for screen width up to 310px */
 @media screen and (max-width: 310px) {
+    /* Further adjustments for the button font size in the bottom section of each card */
     div.card section div.bottom a {
         font-size: 50%;
     }

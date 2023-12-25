@@ -14,6 +14,7 @@ div.header {
     align-items: center;
 }
 
+/* Styles for the button in the right section of the header */
 div.header .right button {
     background-color: #0D73E2;
     color: #fff;
@@ -36,7 +37,6 @@ div.footer {
     border-bottom: solid 4px #0D73E2;
 
     height: calc(100px * 1);
-    /* width: calc(100px * 7); */
     width: 50%;
     margin: 2% auto 2%;
     padding: 1%;
@@ -48,10 +48,10 @@ div.footer {
     overflow: auto;
 }
 
+/* Styles for the ticket card buttons within the footer */
 div.footer button.ticket-card {
     background-color: white;
     border: 0;
-    /* border-bottom: solid 4px #0D73E2; */
 
     color: black;
     cursor: pointer;
@@ -72,6 +72,7 @@ div.footer button.ticket-card:hover {
     transform: scale(1.02);
 }
 
+/* Styles for the left and right sections of the ticket card */
 div.footer button.ticket-card .left {
     display: flex;
 }
@@ -93,6 +94,7 @@ div.footer button.ticket-card .right #close {
     font-weight: bold;
 }
 
+/* Styles for various elements within the footer */
 div.footer header {
     color: black;
     display: flex;
@@ -197,6 +199,7 @@ div.popup div.popup-content {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
+/* Styles for the form within the popup */
 div.popup div.popup-content h2 {
     text-align: center;
     margin-bottom: 30px;
@@ -234,6 +237,7 @@ div.popup div.popup-content textarea#description {
     overflow: auto;
 }
 
+/* Styles for the button within the form */
 div.popup div.popup-content button {
     background-color: #0D73E2;
     color: #ffffff;
@@ -251,6 +255,7 @@ div.popup div.popup-content button:hover {
     background-color: #00B1F9;
 }
 
+/* Styles for the close button in the popup */
 div.popup span.close {
     position: absolute;
     margin-top: -10px;

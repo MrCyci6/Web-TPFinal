@@ -1,30 +1,36 @@
+/* Importing Google Fonts Poppins, Outfit, and Roboto with different weights */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800&family=Roboto:wght@100;300;400&display=swap');
 
+/* Root variable declarations for color scheme */
 :root {
     --primary-color: #0D73E2;
     --primary-dark: rgb(5,5,47);;
 }
 
+/* Global styling for the body */
 body {
     font-family: 'Outfit', sans-serif;
     transition: background-color 0.3s, color 0.3s; 
-
 }
 
+/* Container padding for main content */
 .container {
     padding: 0 8.4rem;
 }
 
+/* Logo styling */
 .logo img{
     width: 50%;
 }
 
+/* Header styling for the container */
 header.container{
     box-shadow: 0 4px 17px rgba(0, 0, 0, .1);
     background: #fff;
 }
 
+/* Page header styling */
 .page-header {
     display: flex;
     justify-content: space-between;
@@ -32,22 +38,26 @@ header.container{
     padding: 1rem 0;
 }
 
+/* Logo styling within the page header */
 .logo {
     font-size: 1.5rem;
     font-weight: 800;
 }
 
+/* Link styling for the logo */
 .logo a {
     color: #244D61;
     text-decoration: none;
 }
 
+/* Styling for connected elements in the sidebar */
 aside #is-connected {
     display: flex;
     gap: .6rem;
     list-style-type: none;
 }
 
+/* Styling for connected links in the sidebar */
 aside #is-connected a {
     display: inline-block;
     padding: .3rem 1rem;
@@ -61,12 +71,12 @@ aside #is-connected a {
     transition: .3s;
 }
 
-
-
+/* Hover styling for connected links in the sidebar */
 aside #is-connected a:hover {
     color: var(--primary-color);
 }
 
+/* Styling for login button in the sidebar */
 aside #is-connected a.btn-login {
     padding: 5px 15px;
     margin-right: 5px;
@@ -77,11 +87,13 @@ aside #is-connected a.btn-login {
     transition: background-color 0.3s;
 }
 
+/* Hover styling for login button in the sidebar */
 aside #is-connected a.btn-login:hover {
     color: #fff;
     background-color: #00B1F9;
 }
 
+/* Styling for logout button in the sidebar */
 aside #is-connected button#logout {
     padding: 10px 17px;
     margin-right: 5px;
@@ -93,25 +105,30 @@ aside #is-connected button#logout {
     transition: background-color 0.3s;
 }
 
+/* Hover styling for logout button in the sidebar */
 aside #is-connected button#logout:hover {
     color: #fff;
     background-color: #00B1F9;
 }
 
+/* Styling for the click element */
 #click {
     display: none;
 }
 
+/* Styling for the burger menu icon */
 .burger {
     display: none;
 }
 
+/* Styling for the dark mode icon */
 .mode i {
     font-size: 1.4rem;
     cursor: pointer;
     color: var(--primary-color);
 }
 
+/* Active state styling for connected elements */
 #is-connected .active{
     background-color: var(--primary-color);
     border-radius: 10px;
@@ -120,19 +137,21 @@ aside #is-connected button#logout:hover {
     color: white;
 }
 
+/* Hover styling for active state in the sidebar */
 #is-connected .active:hover{
     background-color: rgb(33, 172, 226);
     transition: 0.3s;
     color: white;
 }
 
+/* Media query for responsive design (max-width: 1024px) */
 @media screen and (max-width:1024px) {
-
-    
+    /* Styles for header at smaller screen sizes */
     header {
         height: auto;
     }
 
+    /* Styles for the sidebar at smaller screen sizes */
     aside #is-connected {
         position: fixed;
         z-index: 2;
@@ -147,8 +166,7 @@ aside #is-connected button#logout:hover {
         translate: 100% 0;
     }
 
-    
-
+    /* Styles for the burger menu icon at smaller screen sizes */
     .burger {
             position: fixed;
             z-index: 3;
@@ -165,6 +183,7 @@ aside #is-connected button#logout:hover {
             color: black;
     }
 
+    /* Styles for connected elements in the sidebar at smaller screen sizes */
     aside .menu #is-connected a {
         display: flex;
         align-items: center;
@@ -173,69 +192,55 @@ aside #is-connected button#logout:hover {
         margin-left: 10px;
       }
 
+    /* Styles for the body when the sidebar is open at smaller screen sizes */
     body.open aside #is-connected{
         translate: 0;
         padding-top: 25px;
     }
 
-
+    /* Styles for the close icon in the burger menu at smaller screen sizes */
     .burger i:last-child {
         display: none;
-      }
-      
+    }
+    
+    /* Styles for the burger menu icon when open at smaller screen sizes */
     body.open .burger i:first-child {
         display: none;
-      }
-      
+    }
+    
+    /* Styles for the close icon in the burger menu when open at smaller screen sizes */
     body.open .burger i:last-child {
         display: block;
         position: absolute;
         top: 0;
         right: 15px;
-      }
+    }
 
-      .burger i{
+    /* Additional styling for the burger menu icon */
+    .burger i{
         margin-left: 20px;
-      }
+    }
 
-      aside #is-connected a{
+    /* Styling for connected elements in the sidebar when open at smaller screen sizes */
+    aside #is-connected a{
         color: #000;
-      }
+    }
 
-      body.open aside #is-connected {
-        translate: 0;
-      }
-
-      .overlay {
-        position: fixed;
-        z-index: 2;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        background: rgb(27 32 44 / 70%);
-        visibility: hidden;
-        opacity: 0;
-        backdrop-filter: blur(6px);
-        transition: 0.3s;
-      }
-
-    body.open .overlay {
-        visibility: visible;
-        opacity: 1;
-      }
-
+    /* Styles for the overlay when the sidebar is open at smaller screen sizes */
     body.open aside #is-connected {
         translate: 0;
     }
 
+    /* Styles for the transition effect when the sidebar is open at smaller screen sizes */
     #click:checked~aside #is-connected {
         left: 0%;
         transition: all 0.3s ease;
     }
 }
 
+/* Media query for responsive design (max-width: 710px) */
 @media screen and (max-width: 710px){
+    /* Styles for the sidebar at smaller screen sizes */
     aside #is-connected {
         position: absolute;
         top: 50%;
@@ -243,14 +248,13 @@ aside #is-connected button#logout:hover {
         display: none;
     }
     
+    /* Styles for the sidebar when open at smaller screen sizes */
     body.open aside #is-connected {
         display: block;
     }
-
 }
-    
 
-
+/* Styling for the canvas element */
 canvas {
     display: block;
     position: absolute;

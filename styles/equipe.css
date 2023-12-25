@@ -1,3 +1,4 @@
+/* Styles for the equipe-section */
 .equipe-section {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -7,6 +8,7 @@
     margin: 0;
 }
 
+/* Styles for the equipe-card */
 .equipe-card {
     display: flex;
     align-items: center;
@@ -17,6 +19,7 @@
     border-radius: 24px;
 }
 
+/* Styles for images inside equipe-card */
 .equipe-card img {
     max-width: 280px;
     width: 28vw;
@@ -28,6 +31,7 @@
     box-shadow: 0 60px 40px rgb(0 0 0 / 8%);
 }
 
+/* Styles for h2 and h3 inside equipe-card */
 .equipe-card h2 {
     font-size: 22px;
     margin-right: 30px;
@@ -39,6 +43,7 @@
     color: rgb(0 0 0 / 90%);
 }
 
+/* Styles for unordered list inside equipe-card */
 .equipe-card ul {
     list-style-type: "➜";
     font-size: 14px;
@@ -47,6 +52,7 @@
     margin-bottom: 24px;
 }
 
+/* Styles for links inside equipe-card */
 .equipe-card a {
     border: 0;
     color: #fff;
@@ -57,11 +63,14 @@
     transition: background-color 0.3s;
 }
 
+/* Hover effect for links inside equipe-card */
 .equipe-card a:hover {
     background-color: #00B1F9;
 }
 
+/* Media query for screens with width less than or equal to 740px */
 @media (width <= 740px) {
+    /* Responsive styles for equipe-card */
     .equipe-card {
         margin: 0 40px;
         padding-left: 50px;
@@ -71,17 +80,20 @@
         flex-direction: column;
     }
     
+    /* Responsive styles for h2 inside equipe-card */
     .equipe-card h2 {
         margin-right: 0;
         font-size: 26px;
     }
     
+    /* Responsive styles for images inside equipe-card */
     .equipe-card img {
         margin: -100px 0 30px 0;
         width: 100%;
         max-width: 1000px;
     }
 
+    /* Responsive styles for links inside equipe-card */
     .equipe-card a {
         margin: 5% 1% 5%;
     }

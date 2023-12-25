@@ -1,3 +1,4 @@
+/* Styles for the login button in the navigation */
 nav a.btn-login {
     padding: 8px 15px;
     margin-right: 5px;
@@ -8,11 +9,13 @@ nav a.btn-login {
     transition: background-color 0.3s;
 }
 
+/* Hover styles for the login button */
 nav a.btn-login:hover {
     color: #fff;
     background-color: #00B1F9;
 }
 
+/* Styles for the button in the right section of the navigation */
 nav .right button {
     padding: 10px 17px;
     margin-right: 5px;
@@ -24,16 +27,19 @@ nav .right button {
     transition: background-color 0.3s;
 }
 
+/* Hover styles for the button in the right section of the navigation */
 nav .right button:hover {
     color: #fff;
     background-color: #00B1F9;
 }
 
+/* Styles for the profile section */
 div.profile {
     margin: 0 auto;
     padding: 5%;
 }
 
+/* Styles for the profile card container */
 div.profile-card {
     text-align: left;
     background-color: #fff;
@@ -47,6 +53,7 @@ div.profile-card {
     margin: 0 auto;
 }
 
+/* Styles for the profile header */
 .profile-header svg {
     width: 70%;
     padding-top: 20px;
@@ -65,6 +72,7 @@ div.profile-card {
     text-align: center;
 }
 
+/* Styles for the horizontal rule in the profile card */
 .profile-card hr {
     margin-top: 50px;
     margin-bottom: 50px;
@@ -72,11 +80,13 @@ div.profile-card {
     border-top: 1px solid #757575;
 }
 
+/* Styles for the profile details section */
 .profile-details {
     margin-top: 20px;
     text-align: center;
 }
 
+/* Styles for success and error messages in profile details */
 .profile-details div#success {
     color: #00ff0d;
     font-weight: 600;
@@ -91,21 +101,25 @@ div.profile-card {
     text-align: center;
 }
 
+/* Styles for heading elements */
 h2 {
     font-size: 20px;
     margin: 10px 0;
 }
 
+/* Styles for the profile form container */
 div.profile-form {
     text-align: left;
 }
 
+/* Styles for labels in the profile form */
 label {
     font-weight: bold;
     display: block;
     margin-top: 10px;
 }
 
+/* Styles for input fields in the profile form */
 .profile-form input[type="email"],
 .profile-form input[type="text"],
 .profile-form input[type="password"] {
@@ -118,11 +132,13 @@ label {
     border-radius: 10px;
 }
 
+/* Styles for the save button container in the profile form */
 .profile-form div.save-button {
     display: flex;
     justify-content: space-between;
 }
 
+/* Styles for the save button in the profile form */
 .profile-form button {
     background-color: #0D73E2;
     color: #fff;
@@ -133,6 +149,7 @@ label {
     padding: 5px 10px;
 }
 
+/* Hover styles for the save button in the profile form */
 button:hover {
     background-color: #00B1F9;
 }

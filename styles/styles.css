@@ -1,8 +1,10 @@
+/* Font styling for Montserrat */
 @font-face {
   font-family: "Montserrat";
   src: url("../fonts/montserrat/Montserrat-VariableFont_wght.ttf");
 }
 
+/* General styling for the HTML and body */
 html {
   scroll-behavior: smooth;
   zoom: initial;
@@ -13,7 +15,7 @@ body {
   position: relative;
 }
 
-/* animation */
+/* Background animation using canvas */
 canvas {
   display: block;
   position: absolute;
@@ -24,25 +26,25 @@ canvas {
   height: 100%;
 }
 
-/* TITLE */
+/* Styling for the top section, including title, subtitle, and button */
 div.top {
   height: calc(100px * 5);
   margin-bottom: 10%;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+/* Styling for the title */
 div.top h1#first-title {
   color: #000;
   font-size: 350%;
-
   margin-top: 2%;
   margin-bottom: -2.5%;
 }
 
+/* Styling for the subtitle */
 div.top h1#sec {
   color: #0D73E2;
   font-size: 350%;
@@ -52,28 +54,30 @@ div.top div#space {
   margin: 0.5%;
 }
 
+/* Styling for the paragraph in the top section */
 div.top p {
   color: #464646;
   margin: 0;
 }
 
+/* Styling for the button in the top section */
 div.top a.btn {
   padding: 1% 2%;
   border-radius: 20px;
   margin-top: 2.5%;
   font-weight: bold;
-
   background-color: #0D73E2;
   color: #ffffff;
-  
   text-decoration: none;
   transition: background-color 0.3s;
 }
 
+/* Button hover effect */
 div.top a.btn:hover {
   background-color: #00B1F9;
 }
 
+/* Media queries for responsive design */
 @media screen and (max-width: 950px) {
   div.top {
     margin-top: -10%;
@@ -82,7 +86,6 @@ div.top a.btn:hover {
 
   div.top h1#first {
     font-size: 250%;
-  
     margin-top: 2%;
     margin-bottom: -2.5%;
   }
@@ -113,35 +116,32 @@ div.top a.btn:hover {
   }
 }
 
-/* PRESENTATION */
-
+/* Styling for the presentation section */
 section#presentation {
   padding-top: 15%;
   padding-bottom: 2.5%;
   margin-bottom: 1%;
-  
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
   color: #000;
   text-align: left;
 }
 
+/* Styling for the presentation cards */
 section#presentation .presentation {
   margin-bottom: 20px;
-
   border-radius: 25px;
   height: 80%;
   width: 80%;
-  
   opacity: 80%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+/* Styling for the image in the presentation card */
 section#presentation .presentation .image {
   flex: 1;
   margin: 0 2.5%;
@@ -152,45 +152,50 @@ section#presentation .presentation .image img {
   width: 125%;
 }
 
+/* Styling for the text in the presentation card */
 section#presentation .presentation .text {
   flex: 2;
-
   color: #000;
   border-radius: 25px;
   height: 100%;
   margin-left: 6em;
-
   display: flex;
   flex-direction: column;
 }
 
+/* Hover effect for the presentation cards */
 section#presentation .presentation .text:hover {
   background-color: #f5f5f5;
   transform: scale(1.01);
   transition: 0.05s;
 }
 
+/* Styling for the headings in the presentation card */
 section#presentation .presentation .text h1 {
   margin-left: 2.5%;
   margin-bottom: 0.5%;
 }
 
+/* Styling for the paragraphs in the presentation card */
 section#presentation .presentation .text p {
   margin-left: 2.5%;
   margin-bottom: -1.5%;
 }
 
+/* Styling for the unordered list in the presentation card */
 section#presentation .presentation ul {
   margin-top: 10%;
   list-style-type: none;
   color: #464646; 
 }
 
+/* Styling for list items in the presentation card */
 section#presentation .presentation li {
   list-style-image: url("../svg/check.svg");
   margin-bottom: 10px;
 }
 
+/* Media queries for responsive design in the presentation section */
 @media screen and (max-width: 1080px) {
   section#presentation {
     padding-top: 0;
@@ -213,18 +218,18 @@ section#presentation .presentation li {
   section#presentation .presentation .text {
     height: 100%;
     width: 100%;
-    
     margin-bottom: 5%;
   }
 }
 
-/* ACTUALITES */
+/* Styling for the "Actualites" section */
 section#actu h1#actus {
   color: #000;
   text-align: center;
   margin-bottom: 2.5%;
 }
 
+/* Styling for the cards in the "Actualites" section */
 section#actu div.cards {
   display: flex;
   flex-direction: row;
@@ -232,50 +237,53 @@ section#actu div.cards {
   align-items: center;
 }
 
+/* Styling for individual cards in the "Actualites" section */
 section#actu div.cards section {
   width: 25%;
   display: flex;
   flex-direction: column;
   border-radius: 15px;
-
   padding: 20px;
 }
 
+/* Hover effect for individual cards in the "Actualites" section */
 section#actu div.cards section:hover {
   background-color: #f5f5f5;
   transform: scale(1.01);
   transition: 0.05s;
 }
 
+/* Styling for the date paragraph in individual cards */
 section#actu div.cards section div p.date {
   color: #0D73E2;
 }
 
-/* CHIFFRES */
+/* Styling for the "Chiffres" section */
 section#chiffres {
   margin-top: 15%;
 }
 
+/* Styling for the "Chiffres" heading */
 section#chiffres .chiffres {
   color: #000;
   margin-bottom: 1%;
   text-align: center;
 }
 
+/* Styling for the cards in the "Chiffres" section */
 section#chiffres .cards {
   margin-top: 2.5%;
   margin-bottom: 5%;
-
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 2.5%;
-
   color: #000;
 }
 
+/* Styling for individual articles in the "Chiffres" section */
 section#chiffres article {
   position: relative;
   perspective: 300%;
@@ -283,6 +291,7 @@ section#chiffres article {
   height: 300px;
 }
 
+/* Styling for the header in individual articles */
 section#chiffres article header {
   display: flex;
   justify-content: space-between;
@@ -291,16 +300,19 @@ section#chiffres article header {
   margin-bottom: 18%;
 }
 
+/* Styling for the heading in individual articles */
 section#chiffres article header h2 {
   font-size: 20px;
   font-weight: 500;
   margin: 0;
 }
 
+/* Styling for images in individual articles */
 section#chiffres article img {
   width: 35%;;
 }
 
+/* Styling for the front and back faces of individual articles */
 section#chiffres article .front,
 section#chiffres article .back {
   position: absolute;
@@ -317,38 +329,44 @@ section#chiffres article .back {
   cursor: pointer;
 }
 
+/* Hover effect for the front and back faces of individual articles */
 section#chiffres article .front:hover,
 section#chiffres article .back:hover {
   background-color: #f5f5f5;
 }
 
+/* Styling for the back face of individual articles */
 section#chiffres article .back{
   background-color: #f5f5f5;
 }
 
-
-
+/* Styling for the back face in the "Chiffres" section */
 section#chiffres .back {
   transform: rotateY(180deg);
 }
 
+/* Styling for the input in the "Chiffres" section */
 section#chiffres input {
   position: absolute;
   scale: 0;
 }
 
+/* Styling for the checked input in the "Chiffres" section */
 section#chiffres input:checked ~ article .back {
   transform: rotateY(0);
 }
 
+/* Styling for the unchecked input in the "Chiffres" section */
 section#chiffres input:checked ~ article .front {
   transform: rotateY(-180deg);
 } 
 
+/* Styling for the top paragraph in the back face of individual articles */
 section#chiffres article .back p#top {
   margin-top: 25%;
 }
 
+/* Media query for responsive design in the "Chiffres" section */
 @media screen and (max-width: 950px) {
   section#chiffres article {
     margin-bottom: 5%;

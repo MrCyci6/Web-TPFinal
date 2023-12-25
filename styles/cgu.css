@@ -1,3 +1,4 @@
+/* Styles for the header within the div with class 'cgu' */
 div.cgu #header {
     background-color: #f5f5f5;
     border-bottom: solid 4px #0D73E2;
@@ -8,10 +9,12 @@ div.cgu #header {
     padding: 0 0 0 1%;
     border-radius: 10px;
 
+    /* Aligns the content vertically in the center */
     display: flex;
     align-items: center;
 }
 
+/* Styles for the footer within the div with class 'cgu' */
 div.cgu #footer {
     background-color: #f5f5f5;
     border-bottom: solid 4px #0D73E2;
@@ -23,20 +26,24 @@ div.cgu #footer {
     border-radius: 10px;
 }
 
+/* Styles for h1 element within the footer */
 div.cgu #footer h1 {
     text-align: center;
 }
 
+/* Styles for content within the footer */
 div.cgu #footer .content {
     margin: 0 0 2% 2%;
 }
 
+/* Styles for links within the content of the footer */
 div.cgu #footer .content a {
     text-decoration: none;
     color: black;
 }
 
+/* Styles for links when hovered within the content of the footer */
 div.cgu #footer .content a:hover {
     color: #0D73E2;
-    transition: 0.1s;
+    transition: 0.1s; /* Smooth transition effect over 0.1 seconds */
 }

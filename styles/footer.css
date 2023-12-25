@@ -1,3 +1,4 @@
+/* Styles for the horizontal line with class 'footer' */
 hr.footer {
     padding: 10px;
     margin-left: 100px;
@@ -6,6 +7,7 @@ hr.footer {
     border-top: 1px solid #757575;
 }
 
+/* Styles for the footer section */
 footer {
     color: #000;
     padding: 20px;
@@ -18,37 +20,44 @@ footer {
     height: 200px;
 }
 
+/* Styles for individual sections within the footer */
 .footer-section {
     margin: 0 auto;
 }
 
+/* Styles for links within the footer section */
 .footer-section a {
     text-decoration: none;
     color: #000;
     transition: color 0.3s;
 }
 
+/* Hover effect for links within the footer section */
 .footer-section a:hover {
     color: #0056b3;
 }
 
+/* Styles for heading 2 within the footer section */
 .footer-section h2 {
     font-size: 1.2rem;
     padding: 0;
     margin-bottom: 10px;
 }
 
+/* Styles for unordered list within the footer section */
 .footer-section ul {
     list-style: none;
     padding: 0;
 }
 
+/* Styles for list items within the unordered list */
 .footer-section ul li {
     margin-bottom: 5px;
     font-size: 0.9rem;
     vertical-align: middle;
 }
 
+/* Styles for the copyright text section */
 div.copyright {
     color: #000;
     margin-bottom: 10px;
