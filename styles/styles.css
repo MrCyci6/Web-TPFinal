@@ -372,3 +372,14 @@ section#chiffres article .back p#top {
     margin-bottom: 5%;
   }
 }
+
+
+.image img{
+  filter: grayscale(100%);
+}
+
+.image img:hover{
+  transition-duration: 0.5s;
+  transform: scale(1.1);
+  filter: grayscale(0%);
+}

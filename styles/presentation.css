@@ -34,14 +34,14 @@
     margin: 20px;
 }
 
-/* Styles for images inside .image class */
-.start-up .image img {
+/* Styles for images inside .image-presentation class */
+.start-up .image-presentation img {
     height: 100%;
     width: 100%;
 }
 
-/* Styles for .image class inside .reduction class */
-.start-up .reduction .image {
+/* Styles for .image-presentation class inside .reduction class */
+.start-up .reduction .image-presentation {
     background: whitesmoke;
     padding: 1em;
     width: 70%;
