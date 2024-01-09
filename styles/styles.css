@@ -137,7 +137,7 @@ section#presentation .presentation {
   width: 80%;
   opacity: 80%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -207,7 +207,9 @@ section#presentation .presentation li {
   section#presentation .presentation {
     display: flex;
     flex-direction: column;
-    margin: 0 1%;
+    width: 75%;
+    margin-left: -10%;
+    margin-right: 5%;
   }
   
   section#presentation .presentation .image {
@@ -235,11 +237,12 @@ section#actu div.cards {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 /* Styling for individual cards in the "Actualites" section */
 section#actu div.cards section {
-  width: 25%;
+  width: 30%;
   display: flex;
   flex-direction: column;
   border-radius: 15px;
@@ -256,6 +259,16 @@ section#actu div.cards section:hover {
 /* Styling for the date paragraph in individual cards */
 section#actu div.cards section div p.date {
   color: #0D73E2;
+}
+
+@media screen and (max-width: 1000px) {
+  section#actu div.cards {
+    flex-direction: column;
+  }
+
+  section#actu div.cards section {
+    width: 75%;
+  }
 }
 
 /* Styling for the "Chiffres" section */
