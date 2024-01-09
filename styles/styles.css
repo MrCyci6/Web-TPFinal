@@ -120,7 +120,6 @@ div.top a.btn:hover {
 section#presentation {
   padding-top: 15%;
   padding-bottom: 2.5%;
-  margin-bottom: 1%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -194,6 +193,30 @@ section#presentation .presentation li {
   list-style-image: url("../svg/check.svg");
   margin-bottom: 10px;
 }
+
+section#video-link {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  margin-bottom: 10%;
+}
+
+section#video-link a {
+  padding: 1% 2%;
+  border-radius: 20px;
+  font-weight: bold;
+  background-color: #0D73E2;
+  color: #ffffff;
+  text-decoration: none;
+  transition: background-color 0.3s;
+} 
+
+/* Button hover effect */
+section#video-link a:hover {
+  background-color: #00B1F9;
+}
+
 
 /* Media queries for responsive design in the presentation section */
 @media screen and (max-width: 1080px) {
