@@ -7,7 +7,7 @@ const https = require('https');
 // Load configuration settings from config.json
 const config = require('./config.json')
 
-// Create an instance of Express
+// Create an instance of Express Framework
 const app = express()
 
 // Use Morgan for logging in the 'dev' format
@@ -18,18 +18,16 @@ app.use(morgan('dev'));
 app.use(cors());
 
 // Enable JSON parsing for incoming requests
-app.use(express.json())
-//app.set('view engine', 'ejs');
-//app.use(express.static('public'));
+app.use(express.json());
 
 // Iterate through files in the 'routes' directory and include them as routes
 fs.readdirSync("./routes").forEach(file => {
     // Only include JavaScript files
-	if(!file.endsWith('.js')) return   
+	if(!file.endsWith('.js')) return;  
     
     // Include routes from each file
-    app.use('/', require(`./routes/${file}`))     
-    console.log(`>>> route : ${file}`)
+    app.use('/', require(`./routes/${file}`));  
+    console.log(`>>> route : ${file}`);
 })
 	
 // Start the Express app and listen on the specified host and port
@@ -43,9 +41,7 @@ try {
 	// Create https server
 	const server = https.createServer(options, app);
 
-	let port = config.port
-	server.listen(port, config.host)
-	
+	server.listen(config.port, config.host)	
 	console.log(`- API enabled on ${config.host}:${port}`)
 
 } catch (e) {
