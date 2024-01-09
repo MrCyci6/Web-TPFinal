@@ -263,3 +263,46 @@ div.popup span.close {
     font-size: 20px;
     cursor: pointer;
 }
+
+@media screen and (max-width: 800px) {
+    div.header .left {
+        display: none;
+    }
+
+    div.header .right {
+        margin: 0 auto 0;
+    }
+
+    div.footer {
+        width: 75%;
+    }
+
+    div.footer #replace .message {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    div.header .right button {
+        width: 100%;
+        margin-bottom:2%;
+    }
+
+    div.footer #replace button {
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+        width: 95%;
+    }
+
+    div.footer #replace form#message-form {
+        flex-wrap: wrap;
+    }
+
+    div.footer #replace div.text-input form#message-form textarea#text {
+        width: 100%
+    }
+
+    div.footer div.popup-content {
+        width: 80%;
+    }
+}
