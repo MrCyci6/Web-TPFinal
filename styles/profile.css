@@ -153,3 +153,13 @@ label {
 button:hover {
     background-color: #00B1F9;
 }
+
+@media screen and (max-width: 660px) {
+    div.profile-details div.profile-form div.save-button {
+        flex-direction: column;
+    }
+
+    div.profile-details div.profile-form div.save-button button {
+        font-size: 75%;
+    }
+}
