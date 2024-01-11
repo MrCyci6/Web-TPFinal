@@ -207,6 +207,10 @@ section#video-link {
   margin-bottom: 10%;
 }
 
+section#video-link h1{
+  text-align: center;
+}
+
 section#video-link a {
   padding: 1% 2%;
   border-radius: 20px;
