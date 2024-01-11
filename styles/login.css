@@ -267,3 +267,22 @@ canvas {
     width: 100%;
     height: 100%;
 }
+
+
+/* Existing styles remain unchanged */
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 768px) {
+
+    .toggle-container,
+    .container.active .toggle-container {
+        border-radius: 0;
+    }
+}
+
+/* Additional media query for even smaller screens, if needed */
+@media only screen and (max-width: 430px) {
+    body {
+        margin: 0.5em;
+    }
+}

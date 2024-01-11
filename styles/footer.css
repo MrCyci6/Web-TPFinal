@@ -49,11 +49,10 @@ footer {
 }
 
 /* Styles for the copyright text section */
-footer div.copyright {
+ div.copyright {
     color: #000;
-    position: absolute;
-    left: 45%;
-    bottom: 0;
+    margin-top: 1em;
+    text-align: center;
 }
 
 @media screen and (max-width: 430px) {
@@ -68,10 +67,8 @@ footer div.copyright {
         flex-direction: row;
         justify-content: center;
     }
-    
-    footer div.copyright{
-        position: absolute;
-        bottom: 0;
-        margin: 1em auto;
+
+    div.copyright{
+        margin-top: 5em;
     }
 }
