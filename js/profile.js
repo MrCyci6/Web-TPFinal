@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
             
             // Update the inner HTML of the div with links and buttons for an authenticated user
             div.innerHTML = `
+                <a href="./missions.html">Missions</a>
                 <a href="./offres.html">Offres</a>
                 <a href="./equipe.html">Equipe</a>
                 <a href="./contact.html">Contact</a>

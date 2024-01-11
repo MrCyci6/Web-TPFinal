@@ -1,0 +1,32 @@
+section#missions h1#top {
+    text-align: center;
+
+    margin: 2% auto 2%;
+    width: 25%;
+}
+
+section#missions h1 {
+    text-align: center;
+}
+
+section#missions div {
+    width: 90%;
+    margin: 0 auto 0;
+    border: solid 4px #0D73E2;
+    border-radius: 10px;
+    margin-bottom: 2%;
+}
+
+section#missions div:hover {
+    background-color: #f5f5f5;
+    transform: scale(1.01);
+    transition: 0.05s;
+}
+
+section#missions div ul {
+    list-style-type: none;
+}
+
+section#missions div li p {
+    margin-left: 5%;
+}
