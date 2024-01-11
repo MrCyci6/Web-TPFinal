@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
             div.innerHTML = `
                 <a href="./offres.html">Offres</a>
                 <a href="./equipe.html">Equipe</a>
+                <a href="./missions.html">Missions</a>
                 <a href="./contact.html">Contact</a>
                 <a class="btn-login" href="./profile.html"><i class="fa fa-user-circle"></i></a>
                 <button id="logout" type="submit"><i class="fa fa-window-close-o"></i></button>
