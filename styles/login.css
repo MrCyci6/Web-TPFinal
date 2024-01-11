@@ -251,6 +251,12 @@ body{
     top: 5px;
 }
 
+@media  screen and (max-width:430px) {
+    body{
+        margin: 1em;
+    }
+}
+
 /* Styles for canvas element */
 canvas {
     display: block;

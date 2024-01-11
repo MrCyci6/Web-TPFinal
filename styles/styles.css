@@ -114,6 +114,10 @@ div.top a.btn:hover {
   div.top a.btn {
     padding: 4% 5%;
   }
+
+  div.top{
+    text-align: center;
+  }
 }
 
 /* Styling for the presentation section */

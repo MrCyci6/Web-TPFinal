@@ -11,12 +11,14 @@
 /* Global styling for the body */
 body {
     font-family: 'Outfit', sans-serif;
-    transition: background-color 0.3s, color 0.3s; 
 }
 
 /* Container padding for main content */
-.container {
+header.container {
     padding: 0 8.4rem;
+    box-shadow: 0 4px 17px rgba(0, 0, 0, .1);
+    background: #fff;
+    
 }
 
 /* Logo styling */
@@ -25,10 +27,7 @@ body {
 }
 
 /* Header styling for the container */
-header.container{
-    box-shadow: 0 4px 17px rgba(0, 0, 0, .1);
-    background: #fff;
-}
+
 
 /* Page header styling */
 .page-header {
@@ -133,7 +132,7 @@ aside #is-connected button#logout:hover {
     background-color: var(--primary-color);
     border-radius: 10px;
     text-align: center;
-    width: 50%;
+    width: 40%;
     color: white;
 }
 
@@ -146,6 +145,7 @@ aside #is-connected button#logout:hover {
 
 /* Media query for responsive design (max-width: 1024px) */
 @media screen and (max-width:1024px) {
+    
     /* Styles for header at smaller screen sizes */
     header {
         height: auto;
@@ -164,33 +164,24 @@ aside #is-connected button#logout:hover {
         background: whitesmoke;
         box-shadow: 0 0 20px rgb(0 0 0 / 70%);
         translate: 100% 0;
+        padding-left: 15px;
     }
-
+        
     /* Styles for the burger menu icon at smaller screen sizes */
     .burger {
-            position: fixed;
+            position: absolute;
             z-index: 3;
-            top: 17%;
+            top: 1.5%;
             right: 20px;
             display: grid;
             place-items: center;
             padding: 0;
-            font-size: 30px;
             background: transparent;
             color: #f9f9f9;
             border: 0;
             cursor: pointer;
             color: black;
     }
-
-    /* Styles for connected elements in the sidebar at smaller screen sizes */
-    aside .menu #is-connected a {
-        display: flex;
-        align-items: center;
-        height: 50%;
-        font-size: 60%;
-        margin-left: 10px;
-      }
 
     /* Styles for the body when the sidebar is open at smaller screen sizes */
     body.open aside #is-connected{
@@ -202,6 +193,10 @@ aside #is-connected button#logout:hover {
     .burger i:last-child {
         display: none;
     }
+
+    .burger i:first-child{
+        font-size: 30px;
+    }
     
     /* Styles for the burger menu icon when open at smaller screen sizes */
     body.open .burger i:first-child {
@@ -211,9 +206,10 @@ aside #is-connected button#logout:hover {
     /* Styles for the close icon in the burger menu when open at smaller screen sizes */
     body.open .burger i:last-child {
         display: block;
-        position: absolute;
-        top: 0;
-        right: 15px;
+        position: fixed;
+        top: 15px;
+        right: 5px;
+        font-size: 20px;
     }
 
     /* Additional styling for the burger menu icon */
@@ -238,22 +234,27 @@ aside #is-connected button#logout:hover {
     }
 }
 
-/* Media query for responsive design (max-width: 710px) */
-@media screen and (max-width: 710px){
-    /* Styles for the sidebar at smaller screen sizes */
-    aside #is-connected {
-        position: absolute;
-        top: 50%;
-        right: 50%;
-        display: none;
+@media screen and (max-width:430px){
+    aside #is-connected{
+        width: 40%;
     }
-    
-    /* Styles for the sidebar when open at smaller screen sizes */
-    body.open aside #is-connected {
-        display: block;
-    }
-}
 
+    .burger{
+        position: absolute;
+        top: 4em;
+    }
+
+    .logo img{
+        margin-left: -100px;
+        width: 110px;
+    }
+
+   #is-connected .active{
+        width: 60%;
+   }
+
+
+}
 /* Styling for the canvas element */
 canvas {
     display: block;

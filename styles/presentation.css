@@ -1,12 +1,12 @@
 /* Sets a margin for the .start-up class with top, right, bottom, and left values */
-.start-up {
+/* .start-up {
     margin: 300px 100px 100px 100px;
-}
+} */
 
 /* Styles for images inside .eval-text and .reduct-text classes */
 .start-up .eval-text img,
 .start-up .reduct-text img {
-    width: 50%;
+    width: 5em;
     border: 1px solid black;
     padding: 15px;
     border-radius: 20px;
@@ -17,7 +17,7 @@
 .start-up .services {
     display: grid;
     grid-template-columns: 2fr 5fr;
-    width: 100%;
+    width: 100%; 
 }
 
 /* Styles for h1 and h2 tags inside .start-up */
@@ -36,18 +36,17 @@
 
 /* Styles for images inside .image-presentation class */
 .start-up .image-presentation img {
-    height: 100%;
-    width: 100%;
+    height: 30em;
+    width: 25em;
 }
 
 /* Styles for .image-presentation class inside .reduction class */
-.start-up .reduction .image-presentation {
-    background: whitesmoke;
+/* .start-up .reduction .image-presentation {
     padding: 1em;
     width: 70%;
     text-align: center;
     padding-bottom: 0;
-}
+} */
 
 /* Styles for .evalue and .reduction classes using grid layout */
 .start-up .evalue,
@@ -60,35 +59,72 @@
 .start-up .title-text p {
     text-align: center;
     width: 50%;
-    margin-left: 25%;
+    margin: 0 auto;
 }
 
 /* Styles for an element with a border on top and bottom */
 .start-up .border-top-bottom {
     border-top: 1px solid gray;
     border-bottom: 1px solid gray;
-    height: 90%;
+    height: 100%;
 }
 
-/* video presentation */
-section#video {
-    background-color: #f5f5f5;
-    border-bottom: solid 4px #0D73E2;
+@media screen and (max-width:435px){
+    .start-up{
+        text-align: center;
+    }
 
-    height: 450px;
-    width: 75%;
-    margin: 2% auto 2%;
-    padding: 1% 0 1% 1%;
-    border-radius: 10px;
+    .image-presentation img{
+        display: none;
+    }
 
-    display: flex;
-    justify-content: center;
-}
+    .start-up .evalue{
+        margin-right: 100px;
+    }
+    
+    .start-up .border-top-bottom {
+        border-top: 0px;
+        border-bottom: 0px;
+    }
 
-section#video div.video h1 {
-    text-align: center;
-}
+    .start-up .services p{
+        display: grid;
+        grid-template-rows : 1fr 1fr;
+        width: 11em ;
+        margin: 20px 0 20px 0;
+    }
 
-section#video div.video iframe {
-    border: solid 2px #0D73E2;
+    .start-up .responsive1,
+    .start-up .responsive2{
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+    }
+
+    .start-up .eval-text img,
+    .start-up .reduct-text img{
+        width: 2em;
+    }
+
+    .start-up .eval-text,
+    .start-up .reduct-text{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .start-up .reduction{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .start-up .title-text h1{
+        width: 10em;
+        margin: 0 auto;
+    }
+
+    .start-up .title-text p{
+        width: 20em;
+        text-align: center;
+    }
+
 }
