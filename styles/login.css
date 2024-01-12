@@ -245,16 +245,11 @@ body{
 }
 
 /* Styles for home button */
-.home{
+.back-home img{
+    width: 20px;
     position: absolute;
-    left: 20px;
-    top: 5px;
-}
-
-@media  screen and (max-width:430px) {
-    body{
-        margin: 1em;
-    }
+    top: 1em;
+    left: 1em;
 }
 
 /* Styles for canvas element */
@@ -268,21 +263,14 @@ canvas {
     height: 100%;
 }
 
-
-/* Existing styles remain unchanged */
-
-/* Media query for smaller screens */
-@media only screen and (max-width: 768px) {
-
-    .toggle-container,
-    .container.active .toggle-container {
-        border-radius: 0;
-    }
-}
-
 /* Additional media query for even smaller screens, if needed */
 @media only screen and (max-width: 430px) {
     body {
         margin: 0.5em;
+    }
+
+    span,
+    p{
+        display: none;
     }
 }
